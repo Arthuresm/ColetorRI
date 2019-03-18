@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: htmlcleaner
+Archiver-Version: Plexus Archiver
+Built-By: scottw
+Bnd-LastModified: 1427557260442
+Bundle-ManifestVersion: 2
+Import-Package: javax.xml.parsers,org.apache.tools.ant,org.jdom2,org.w
+ 3c.dom,org.xml.sax,org.xml.sax.helpers
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Main-Class: org.htmlcleaner.CommandLine
+Ant-Version: Apache Ant 1.8.4
+Export-Package: org.htmlcleaner;version="1.0.0";uses:="javax.xml.parse
+ rs,org.apache.tools.ant,org.htmlcleaner.audit,org.htmlcleaner.conditi
+ onal,org.jdom2,org.w3c.dom,org.xml.sax",org.htmlcleaner.audit;version
+ ="1.0.0";uses:="org.htmlcleaner,org.htmlcleaner.conditional",org.html
+ cleaner.conditional;version="1.0.0";uses:="org.htmlcleaner"
+Bundle-Name: htmlcleaner-bundle
+Bundle-Version: 2.11
+Created-By: Apache Maven 3.2.5
+Build-Jdk: 1.8.0_31
+
