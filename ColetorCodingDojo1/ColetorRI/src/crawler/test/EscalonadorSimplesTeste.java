@@ -15,7 +15,7 @@ import crawler.escalonadorCurtoPrazo.EscalonadorSimples;
 
 public class EscalonadorSimplesTeste {
 	private static Escalonador e = new EscalonadorSimples();
-	
+        
 	@Test
 	public synchronized void testServidor() {
 		Servidor s= new Servidor("xpto.com");
@@ -30,10 +30,11 @@ public class EscalonadorSimplesTeste {
 			e.printStackTrace();
 		}
 		assertTrue("Após a espera de Servidor.ACESSO_MILIS milissegundos, o servidor deve voltar a ficar acessível",s.isAccessible());
-	}
+                System.out.println("Terminou testServidor");
+        }
 	
 	@Test
-	public synchronized void testAdicionaRemovePagina() throws MalformedURLException {
+	public static synchronized void testAdicionaRemovePagina() throws MalformedURLException {
 		
 		URLAddress urlProf = new URLAddress("http://www.xpto.com.br/index.html",Integer.MAX_VALUE);
 		URLAddress urlTerra = new URLAddress("http://www.terra.com.br/index.html",1);
@@ -53,6 +54,7 @@ public class EscalonadorSimplesTeste {
 		e.adicionaNovaPagina(urlUOL2);
 		e.adicionaNovaPagina(urlGlobo);
 		
+                
 		//testa a ordem dos elementos
 		u1 = e.getURL();
 		u2 = e.getURL();
@@ -86,7 +88,16 @@ public class EscalonadorSimplesTeste {
 		assertTrue("O tempo de espera entre duas requisições do mesmo servidor não foi maior que "+Servidor.ACESSO_MILIS,(timeSecondHitUOL-timeFirstHitUOL)>Servidor.ACESSO_MILIS);
 		
 		
-		
+                System.out.println("Terminou testAdicionaRemovePagina ");
 	}
+        
+        public static void x(){
+            
+        }
+        
+        public static void main(String[] args) throws MalformedURLException{	
+            testAdicionaRemovePagina();
+	}
+        
 
 }
