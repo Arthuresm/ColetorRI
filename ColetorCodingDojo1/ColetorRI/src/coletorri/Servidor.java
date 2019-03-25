@@ -27,8 +27,7 @@ public class Servidor {
 	public long getTimeSinceLastAcess()
 	{
             long vistoPorUltimo = System.currentTimeMillis();
-            
-            
+               
             return (vistoPorUltimo - horarioInicial);
 	}
 	
@@ -40,6 +39,7 @@ public class Servidor {
 	{
             horarioInicial = System.currentTimeMillis();
             System.out.println(horarioInicial);
+            System.out.println("AKSLJDLSKJDSA");
 
             //method 2 - via Date
             Date date = new Date();

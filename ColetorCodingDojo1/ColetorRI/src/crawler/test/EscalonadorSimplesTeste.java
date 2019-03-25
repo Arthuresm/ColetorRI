@@ -46,12 +46,12 @@ public class EscalonadorSimplesTeste {
 		URLAddress u1,u2,u3;
 		
 		
-		e.adicionaNovaPagina(urlProf);
-		e.adicionaNovaPagina(urlTerra);
+		e.adicionaNovaPagina(urlProf);//xpto
+		e.adicionaNovaPagina(urlTerra);//terra
 		e.adicionaNovaPagina(urlTerraRep);
 		timeFirstHitUOL = System.currentTimeMillis();
-		e.adicionaNovaPagina(urlUOL1);
-		e.adicionaNovaPagina(urlUOL2);
+		e.adicionaNovaPagina(urlUOL1);//uol1
+		e.adicionaNovaPagina(urlUOL2);//uol2
 		e.adicionaNovaPagina(urlGlobo);
 		
                 
@@ -77,7 +77,14 @@ public class EscalonadorSimplesTeste {
 		System.out.println("Resgatando uma URL de um dominio que acaba de ser acessado... ");
 		URLAddress u4 = e.getURL();
 		timeSecondHitUOL = System.currentTimeMillis();
-		
+                
+		System.out.println(u4.getAddress().equals(urlTerraRep.getAddress()));
+                
+                
+//                
+//                Condicao u4.getAddress().equals(urlTerraRep.getAddress())
+                        
+                        
 		//testa se a url urlTerraRep foi adicionada (pois, assim, ela foi adicionada duas vezes já que urlTerra==urlTerraRep)
 		if(u4.getAddress().equals(urlTerraRep.getAddress())){
 			assertTrue("A URL '"+urlTerraRep+"' foi adicionada duas vezes!",false);
@@ -85,17 +92,18 @@ public class EscalonadorSimplesTeste {
 
 		
 		//testa a espera para pegar o u4 (uol)		
+                System.out.println("t1 = "+timeFirstHitUOL);
+                System.out.println("t2 = "+timeSecondHitUOL);
 		assertTrue("O tempo de espera entre duas requisições do mesmo servidor não foi maior que "+Servidor.ACESSO_MILIS,(timeSecondHitUOL-timeFirstHitUOL)>Servidor.ACESSO_MILIS);
 		
 		
                 System.out.println("Terminou testAdicionaRemovePagina ");
 	}
         
-        public static void x(){
-            
-        }
+
         
         public static void main(String[] args) throws MalformedURLException{	
+//            testServidor();
             testAdicionaRemovePagina();
 	}
         
