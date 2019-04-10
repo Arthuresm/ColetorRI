@@ -5,7 +5,7 @@ import java.util.Date;
 
 
 public class Servidor {
-	public static final long ACESSO_MILIS = 30*1000;
+	public static final long ACESSO_MILIS = 30*100;
 	
 	
 	private String nome;
@@ -27,8 +27,12 @@ public class Servidor {
 	public long getTimeSinceLastAcess()
 	{
             long vistoPorUltimo = System.currentTimeMillis();
-               
-            return (vistoPorUltimo - horarioInicial);
+            
+            //System.out.println("Servidor " + nome + " teve o ultimo acesso em " + lastAccess);
+            //System.out.println("Horario atual " + vistoPorUltimo);
+            
+           
+            return vistoPorUltimo - lastAccess;
 	}
 	
 	/**
@@ -38,15 +42,8 @@ public class Servidor {
 	public void acessadoAgora()
 	{
             horarioInicial = System.currentTimeMillis();
-            System.out.println(horarioInicial);
-            System.out.println("AKSLJDLSKJDSA");
-
-            //method 2 - via Date
-            Date date = new Date();
-            System.out.println(new Timestamp(date.getTime()));
-
-            //return number of milliseconds since January 1, 1970, 00:00:00 GMT
-//            System.out.println(horarioInicial.getTime());
+            lastAccess = horarioInicial;
+            //System.out.println("Acessei o servidor " + nome + " aos "+ lastAccess);
 
 	}
 	
@@ -56,6 +53,7 @@ public class Servidor {
 	 */
 	public synchronized boolean isAccessible()
 	{
+            //System.out.println(getTimeSinceLastAcess() > ACESSO_MILIS);
             if (getTimeSinceLastAcess() > ACESSO_MILIS)
                 return true;
             

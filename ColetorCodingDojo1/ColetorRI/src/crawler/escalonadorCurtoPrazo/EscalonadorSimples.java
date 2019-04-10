@@ -30,6 +30,7 @@ public class EscalonadorSimples implements Escalonador{
         public int limiteProfundidade = 5;
         public HashMap<Servidor, Record> mapServRecord = new HashMap<>();
         public int contadorPaginas = 0;
+        
         public int limitePaginas = 100;
         
         
@@ -42,30 +43,30 @@ public class EscalonadorSimples implements Escalonador{
                 
                 while(existeAcessivel == 0){
                     for (Servidor servidor: servidores){
-                        if(servidor.isAccessible()){
-                            existeAcessivel = 1;
-                            paginas = map.get(servidor);
-                            if(!paginas.isEmpty()){
-                                //PARAMOS AQUI - SLIDE 9
-                                Iterator<URLAddress> it = paginas.iterator();
-                                URLAddress proximaUrl;
-                                System.out.print("Opa");
-                                if(it.hasNext()){
+                        int indice_fila_servidores = filaServidores.indexOf(servidor);
+                        //System.out.println(indice_fila_servidores);
+                        
+                        if(indice_fila_servidores >= 0){
+                            if(filaServidores.get(indice_fila_servidores).isAccessible()){
+                                existeAcessivel = 1;
+                                paginas = map.get(servidor);
+                                if(!paginas.isEmpty()){
+                                    //PARAMOS AQUI - SLIDE 9
+                                    Iterator<URLAddress> it = paginas.iterator();
+                                    URLAddress proximaUrl;
 
-                                    proximaUrl = it.next();
-                                    System.out.print("thnk you next");
-                                    int indiceServidor = filaServidores.indexOf(servidor);
-                                    System.out.print(indiceServidor);
-                                    if(indiceServidor >= 0){ 
-                                        System.out.print("carau");
-                                        System.out.println(indiceServidor);
-                                        filaServidores.get(indiceServidor).acessadoAgora();
+                                    if(it.hasNext()){
+
+                                        proximaUrl = it.next();
+
+                                        filaServidores.get(indice_fila_servidores).acessadoAgora();
                                         map.get(servidor).remove(proximaUrl);
+
+                                        return proximaUrl;
                                     }
-                                    return proximaUrl;
-                                }
-                                else{
-                                    map.remove(servidor);
+                                    else{
+                                        map.remove(servidor);
+                                    }
                                 }
                             }
                         }
@@ -87,9 +88,13 @@ public class EscalonadorSimples implements Escalonador{
             Servidor serv = new Servidor(urlAdd.getDomain());
             String addr = urlAdd.getAddress();
             
+            //System.out.println(addr + "\n" + urlAdd.getDomain());
+            
             Iterator<URLAddress> it = filaPaginas.iterator();
             URLAddress proximaUrl;
             String addr2;
+            
+            //System.out.println("Numero de itens dentro do map: " + map.size());
             
             while(it.hasNext()){
                 proximaUrl = it.next();
@@ -105,11 +110,11 @@ public class EscalonadorSimples implements Escalonador{
                 // TODO Auto-generated method stub
                 
                 if(filaPaginas.contains(urlAdd.getAddress())){
-                    System.out.println("1"+urlAdd.getDomain());
+                    
                     return false;
                 }
                 filaPaginas.add(urlAdd);
-                System.out.println("2"+urlAdd.getDomain());
+                
                 filaServidores.add(serv);
                 map.put(serv, filaPaginas);
                 return true;
@@ -118,11 +123,11 @@ public class EscalonadorSimples implements Escalonador{
                 // TODO Auto-generated method stub
                 
                 if(filaPaginas.contains(urlAdd.getAddress())){
-                    System.out.println("3"+urlAdd.getDomain());
+                    
                     return false;
                 }
                 filaPaginas.add(urlAdd);
-                System.out.println("4"+urlAdd.getDomain());
+                
                 map.put(serv, filaPaginas);
                 filaServidores.add(serv);
 		return true;

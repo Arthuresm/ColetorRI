@@ -74,11 +74,11 @@ public class EscalonadorSimplesTeste {
 		
 		
 		//resgata o 4o (UOL)
-		System.out.println("Resgatando uma URL de um dominio que acaba de ser acessado... ");
+		System.out.println("\n\nResgatando uma URL de um dominio que acaba de ser acessado... \n\n");
 		URLAddress u4 = e.getURL();
 		timeSecondHitUOL = System.currentTimeMillis();
                 
-		System.out.println(u4.getAddress().equals(urlTerraRep.getAddress()));
+		//System.out.println(u4.getAddress().equals(urlTerraRep.getAddress()));
                 
                 
 //                
@@ -92,8 +92,9 @@ public class EscalonadorSimplesTeste {
 
 		
 		//testa a espera para pegar o u4 (uol)		
-                System.out.println("t1 = "+timeFirstHitUOL);
-                System.out.println("t2 = "+timeSecondHitUOL);
+                //System.out.println("t1 = "+timeFirstHitUOL);
+                //System.out.println("t2 = "+timeSecondHitUOL);
+                
 		assertTrue("O tempo de espera entre duas requisições do mesmo servidor não foi maior que "+Servidor.ACESSO_MILIS,(timeSecondHitUOL-timeFirstHitUOL)>Servidor.ACESSO_MILIS);
 		
 		
