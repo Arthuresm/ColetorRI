@@ -39,4 +39,9 @@ public class PageFetcher {
         this.e = e;
     }
     
+    public void pageRequest(){
+        URLAddress u1 = this.e.getURL();
+        Record r1 = this.e.getRecordAllowRobots(u1);
+        
+    }
 }

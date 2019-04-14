@@ -155,8 +155,7 @@ public class EscalonadorSimples implements Escalonador{
 	public synchronized void putRecorded(String domain, Record domainRec) {
 		// TODO Auto-generated method stub
                 Servidor s = new Servidor(domain);
-                mapServRecord.put(s, domainRec);
-		
+                mapServRecord.put(s, domainRec);	
 	}
         
 	@Override

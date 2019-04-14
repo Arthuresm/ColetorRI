@@ -10,8 +10,7 @@ import org.junit.Test;
 
 import coletorri.Servidor;
 import coletorri.URLAddress;
-import crawler.escalonadorCurtoPrazo.Escalonador;
-import crawler.escalonadorCurtoPrazo.EscalonadorSimples;
+import crawler.escalonadorCurtoPrazo.*;
 
 public class EscalonadorSimplesTeste {
 	private static EscalonadorSimples e = new EscalonadorSimples();
