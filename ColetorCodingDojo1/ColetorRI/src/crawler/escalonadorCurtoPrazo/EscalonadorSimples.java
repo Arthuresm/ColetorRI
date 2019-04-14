@@ -89,49 +89,52 @@ public class EscalonadorSimples implements Escalonador{
             String addr = urlAdd.getAddress();
             
             //System.out.println(addr + "\n" + urlAdd.getDomain());
-            
-            Iterator<URLAddress> it = filaPaginas.iterator();
-            URLAddress proximaUrl;
-            String addr2;
-            
-            //System.out.println("Numero de itens dentro do map: " + map.size());
-            
-            while(it.hasNext()){
-                proximaUrl = it.next();
-                addr2 = proximaUrl.getAddress();
-                if(addr2.equals(addr)){
-                    return false;
+            if(urlAdd.getDepth()<=4){
+                Iterator<URLAddress> it = filaPaginas.iterator();
+                URLAddress proximaUrl;
+                String addr2;
+
+                //System.out.println("Numero de itens dentro do map: " + map.size());
+
+                while(it.hasNext()){
+                    proximaUrl = it.next();
+                    addr2 = proximaUrl.getAddress();
+                    if(addr2.equals(addr)){
+                        return false;
+                    }
+
                 }
-               
-            }
-  
-            if(!map.containsKey(serv)){
-          
-                // TODO Auto-generated method stub
-                
-                if(filaPaginas.contains(urlAdd.getAddress())){
-                    
-                    return false;
+
+                if(!map.containsKey(serv)){
+
+                    // TODO Auto-generated method stub
+
+                    if(filaPaginas.contains(urlAdd.getAddress())){
+
+                        return false;
+                    }
+                    filaPaginas.add(urlAdd);
+
+                    filaServidores.add(serv);
+                    map.put(serv, filaPaginas);
+                    return true;
                 }
-                filaPaginas.add(urlAdd);
-                
-                filaServidores.add(serv);
-                map.put(serv, filaPaginas);
-                return true;
-            }
-            else{
-                // TODO Auto-generated method stub
-                
-                if(filaPaginas.contains(urlAdd.getAddress())){
-                    
-                    return false;
+                else{
+                    // TODO Auto-generated method stub
+
+                    if(filaPaginas.contains(urlAdd.getAddress())){
+
+                        return false;
+                    }
+                    filaPaginas.add(urlAdd);
+
+                    map.put(serv, filaPaginas);
+                    filaServidores.add(serv);
+                    return true;
                 }
-                filaPaginas.add(urlAdd);
-                
-                map.put(serv, filaPaginas);
-                filaServidores.add(serv);
-		return true;
-            }
+            }else{
+                return false;
+            }    
 	}
 
 

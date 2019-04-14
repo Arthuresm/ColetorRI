@@ -46,14 +46,13 @@ public class EscalonadorSimplesTeste {
 		URLAddress u1,u2,u3;
 		
 		
-		e.adicionaNovaPagina(urlProf);//xpto
 		e.adicionaNovaPagina(urlTerra);//terra
 		e.adicionaNovaPagina(urlTerraRep);
 		timeFirstHitUOL = System.currentTimeMillis();
 		e.adicionaNovaPagina(urlUOL1);//uol1
 		e.adicionaNovaPagina(urlUOL2);//uol2
 		e.adicionaNovaPagina(urlGlobo);
-		
+		e.adicionaNovaPagina(urlProf);//xpto
                 
 		//testa a ordem dos elementos
 		u1 = e.getURL();
