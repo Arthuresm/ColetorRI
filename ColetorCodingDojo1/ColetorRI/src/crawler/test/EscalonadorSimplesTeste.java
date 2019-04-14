@@ -14,7 +14,7 @@ import crawler.escalonadorCurtoPrazo.Escalonador;
 import crawler.escalonadorCurtoPrazo.EscalonadorSimples;
 
 public class EscalonadorSimplesTeste {
-	private static Escalonador e = new EscalonadorSimples();
+	private static EscalonadorSimples e = new EscalonadorSimples();
         
 	@Test
 	public synchronized void testServidor() {
@@ -32,10 +32,11 @@ public class EscalonadorSimplesTeste {
 		assertTrue("Após a espera de Servidor.ACESSO_MILIS milissegundos, o servidor deve voltar a ficar acessível",s.isAccessible());
                 System.out.println("Terminou testServidor");
         }
-	
+        
 	@Test
 	public static synchronized void testAdicionaRemovePagina() throws MalformedURLException {
 		
+                Thread [] PageFetchers = new Thread [7];
 		URLAddress urlProf = new URLAddress("http://www.xpto.com.br/index.html",Integer.MAX_VALUE);
 		URLAddress urlTerra = new URLAddress("http://www.terra.com.br/index.html",1);
 		URLAddress urlTerraRep = new URLAddress("http://www.terra.com.br/index.html",1);
@@ -45,6 +46,14 @@ public class EscalonadorSimplesTeste {
 		long timeFirstHitUOL,timeSecondHitUOL; 
 		URLAddress u1,u2,u3;
 		
+                for(int i=0;i<7;i++){
+                PageFetchers[i] = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                            PageFetcher fetcher = new PageFetcher(e);
+                        }
+                    });
+                }
 		
 		e.adicionaNovaPagina(urlTerra);//terra
 		e.adicionaNovaPagina(urlTerraRep);
