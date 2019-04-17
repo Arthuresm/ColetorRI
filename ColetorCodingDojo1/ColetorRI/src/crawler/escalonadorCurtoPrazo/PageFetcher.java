@@ -21,6 +21,7 @@ import com.trigonic.jrobotx.RobotExclusion;
 
 import coletorri.Servidor;
 import coletorri.URLAddress;
+import com.trigonic.jrobotx.RecordIterator;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.logging.Level;
@@ -39,9 +40,39 @@ public class PageFetcher {
         this.e = e;
     }
     
-    public void pageRequest(){
-        URLAddress u1 = this.e.getURL();
-        Record r1 = this.e.getRecordAllowRobots(u1);
+    public void pageRequest() throws MalformedURLException{
+        RobotExclusion robotExclusion = new RobotExclusion();
+        URLAddress proxUrl = e.getURL();
+        
+        Record recordRobot = e.getRecordAllowRobots(proxUrl);
+        
+        if(recordRobot == null){
+            
+            URL proxRobot = new URL(proxUrl.getDomain()+"/robots.txt");      
+            RecordIterator recordIterRobot = robotExclusion.get(proxRobot);
+            
+            if (recordIterRobot != null){
+                recordRobot = recordIterRobot.getNext();
+                e.putRecorded(proxUrl.getAddress(), recordRobot);
+          
+            }
+        
+        }
+        if(recordRobot != null){
+            if(recordRobot.allows(proxUrl.getAddress())){
+                
+                /*
+                    Descobrir como baixar a URL -> ColetorUtil
+                    Para descobrir se um path é alcançavel ou não utilizar o metodo
+                    allows do Record 
+                    Adicionar paginas extraidas das sementes quando necessário 
+                
+                */
+                
+                
+                
+            }
+        }
         
     }
 }

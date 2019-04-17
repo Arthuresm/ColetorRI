@@ -84,7 +84,7 @@ public class RecordIterator extends AbstractIterator<Record> {
 	}
 	
 	@Override
-	protected Record getNext() {
+	public Record getNext() {
 		Record record = null;
 		
 		if (reader != null) {
