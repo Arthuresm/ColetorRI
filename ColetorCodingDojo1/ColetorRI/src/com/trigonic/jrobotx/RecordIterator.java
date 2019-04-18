@@ -16,6 +16,7 @@
 
 package com.trigonic.jrobotx;
 
+import coletorri.ColetorUtil;
 import static com.trigonic.jrobotx.Constants.ALLOW;
 import static com.trigonic.jrobotx.Constants.ANY;
 import static com.trigonic.jrobotx.Constants.COMMENT_DELIM;
@@ -66,6 +67,7 @@ public class RecordIterator extends AbstractIterator<Record> {
 	
 	public RecordIterator(InputStream inputStream) {
 		this(new InputStreamReader(inputStream));
+                
 	}
 	
 	/**
