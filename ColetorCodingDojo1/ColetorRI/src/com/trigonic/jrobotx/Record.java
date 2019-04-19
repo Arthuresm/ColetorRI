@@ -59,8 +59,9 @@ public class Record {
 	}
 	
 	public boolean allows(String path) {
+                System.out.println("Path: "+path);
 		boolean result = true;
-		
+		//System.out.println("Path: "+path);
 		for (String[] rule : rules) {
 			if (rule[1].length() > 0 && ruleMatches(rule[1], path)) {
 				result = rule[0].equals(ALLOW);
@@ -73,9 +74,10 @@ public class Record {
 	
 	static boolean ruleMatches(String rule, String path) {
 	    boolean result = true;
-	    
+	System.out.println("Enconding rule e path...");    
         URLEncodeTokenizer ruleTokens = new URLEncodeTokenizer(rule, URL_ENCODING_SPECIAL_CHARS);
         URLEncodeTokenizer pathTokens = new URLEncodeTokenizer(path, URL_ENCODING_SPECIAL_CHARS);
+        System.out.println("Enconded rule e path");
         while (ruleTokens.hasNext() && pathTokens.hasNext()) {
             Token token1 = ruleTokens.next();
             Token token2 = pathTokens.next();

@@ -27,11 +27,11 @@ public class EscalonadorSimples implements Escalonador{
         public LinkedHashMap<Servidor, HashSet> map = new LinkedHashMap<>();
         public ArrayList<Servidor> filaServidores = new ArrayList<>();
         public HashSet<URLAddress> filaPaginas = new HashSet<>();
-        public int limiteProfundidade = 5;
+        public int limiteProfundidade = 4;
         public HashMap<Servidor, Record> mapServRecord = new HashMap<>();
         public int contadorPaginas = 0;
         
-        public int limitePaginas = 100;
+        public int limitePaginas = 10;
         
         
 	@Override
@@ -89,7 +89,7 @@ public class EscalonadorSimples implements Escalonador{
             String addr = urlAdd.getAddress();
             
             //System.out.println(addr + "\n" + urlAdd.getDomain());
-            if(urlAdd.getDepth()<=4){
+            if(urlAdd.getDepth()<=limiteProfundidade && !finalizouColeta()){
                 Iterator<URLAddress> it = filaPaginas.iterator();
                 URLAddress proximaUrl;
                 String addr2;

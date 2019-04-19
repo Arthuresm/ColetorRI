@@ -74,6 +74,7 @@ public class RobotExclusion {
 				        in.close();
 				        */
 			recordIter = new RecordIterator(in);//urlInputStreamFactory.openStream(robotsUrl));
+                        return new RecordIterator(in);
 		} catch (IOException e) {
 			LOG.info("Failed to fetch " + url, e);
 		}

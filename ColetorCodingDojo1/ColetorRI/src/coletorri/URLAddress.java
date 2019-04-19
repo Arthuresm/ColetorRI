@@ -45,9 +45,18 @@ public class URLAddress {
 
 	public String getPath() {
 		// TODO Auto-generated method stub
-		return address.getPath().length()==0?"/":"";
+                if(address.getPath().length()==0){
+                    //System.out.println("Path 1: "+'/');
+                    return "/";
+                }else{
+                    //System.out.println("Path 2: "+'/');
+                    return address.getPath();
+                }    
 	}
 	
+        public URL getURL(){
+            return address;
+        }
 	
 	
 	public static void main(String[] args) throws MalformedURLException, UnknownHostException

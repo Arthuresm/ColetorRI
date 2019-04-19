@@ -46,7 +46,11 @@ import com.trigonic.jrobotx.util.AbstractIterator;
  * {@link Record#matches(String) matched} "*" may be retrieved using {@link #getDefaultRecord()}.
  */
 public class RecordIterator extends AbstractIterator<Record> {
-	private static final Logger LOG = Logger.getLogger(RecordIterator.class);
+	public static final Logger LOG = Logger.getLogger(RecordIterator.class);
+
+    public static Logger getLOG() {
+        return LOG;
+    }
 	
 	private BufferedReader reader;
 	private List<String> pushBack = new ArrayList<String>();
@@ -86,16 +90,24 @@ public class RecordIterator extends AbstractIterator<Record> {
 	}
 	
 	@Override
-	protected Record getNext() {
-		Record record = null;
+	public Record getNext() {
+		//Record record = null;
 		
 		if (reader != null) {
 			try {
 				Set<String> userAgents = new HashSet<String>();
 				List<String[]> rules = new ArrayList<String[]>();
 				boolean inUserAgents = true;
-	
+                                
+                                //LOG.info("Tentando...");
+                                System.out.println("Tentando...");
 				String line;
+                                
+                                /*
+                                    O codigo abaixo está retornando os arranjos 
+                                    userAgents e rules vazios.
+                                */
+                                
 				while ((line = readLine()) != null) {
 					String[] pieces = splitLine(line);
 					if (pieces[0].equals("")) {
@@ -117,25 +129,37 @@ public class RecordIterator extends AbstractIterator<Record> {
 					}
 				}
 				
+                                //LOG.info("Leitura completa!");
+                                System.out.println("Leitura completa!"+'\n'+ "Agents: "+userAgents.toString()
+                                    +'\n'+"Rules: "+rules.toString());
+                                
 				if (line == null) {
-	                IOUtils.closeQuietly(reader);
-	                reader = null;				    
+                                    IOUtils.closeQuietly(reader);
+                                    reader = null;				    
 				}
-				
+                                
 				if (userAgents.size() > 0 || rules.size() > 0) {
-				    record = new Record(userAgents, rules);
+                                    //LOG.info("defaultRecord montado!");
+                                    System.out.println("defaultRecord montado!");
+				    defaultRecord = new Record(userAgents, rules);
 				}
 			} catch (IOException e) {
 			    // TODO: how to handle this appropriately?
 				LOG.info("read failed", e);
+                                System.out.println("Read falhou 1!");
 			}
 			
-			if (record != null && record.matches(ANY)) {
-				defaultRecord = record;
-			}
+			if (defaultRecord != null) {
+				return new Record(defaultRecord.getUserAgents(),defaultRecord.getRules());
+			}else{
+                            //LOG.info("defaultRecord mal formado!");
+                            //System.out.println("defaultRecord mal formado!");
+                            return null;
+                        }
 		}
-		
-		return record;
+                //LOG.info("Read falhou 2!");
+                System.out.println("Read falhou 2!");
+		return null;
 	}
 	
 	private String readLine() throws IOException {
