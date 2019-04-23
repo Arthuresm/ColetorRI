@@ -50,92 +50,85 @@ public class PageFetcher {
     public PageFetcher (EscalonadorSimples e){
         this.e = e;
         this.proxUrl = e.getURL();
-    }
-            
-    public boolean pageRequest() throws MalformedURLException{
-        RobotExclusion robotExclusion = new RobotExclusion();
         
-        if(proxUrl != null){
-            recordRobot = e.getRecordAllowRobots(proxUrl);
-            //System.out.println("Record Robot!");
-            if(recordRobot == null){
-                
-                //System.out.println("Record Robot não encontrado!");
-                URL proxRobot = new URL(proxUrl.getAddress()+"/robots.txt");
-                //System.out.println("RobotExclusion executado!");
-                RecordIterator recordIterRobot = robotExclusion.get(proxRobot);
-                //System.out.println("RobotExclusion executado!");
-                
-                if (recordIterRobot != null){
-                    //System.out.println("Record Iter Robot encontrado!");
-                    recordRobot = recordIterRobot.getNext();
-                    
-                    if(recordRobot == null){
-                        //System.out.println("Record Robot mal formado!");
-                        return false;
-                    }
-                    
-                    System.out.println("Record Robot: "+recordRobot.toString());
-                    e.putRecorded(proxUrl.getAddress(), recordRobot);
-                    System.out.println("Record Robot salvo!");
-                }else{
-                   System.out.println("recordIterRobot is null!");
-                   return false;
-                }   
-            }
-            String path = proxUrl.getPath();
-            System.out.println("Robot: "+recordRobot.toString()+" - "+"Length: "+proxUrl.getPath().length());
-            if(recordRobot.allows(path)){
-                    /*
-                        Descobrir como baixar a URL -> ColetorUtil
-                        Para descobrir se um path é alcançavel ou não utilizar o metodo
-                        allows do Record 
-                        Adicionar paginas extraidas das sementes quando necessário 
-
-                    */
-                System.out.println("Record Robot allowed!");    
-                InputStream downloadStream;
-                Iterator<String> iteratorAgent = recordRobot.getUserAgents().iterator();
-                String paginaColetada;
-                //System.out.println("Record Robot allowed!");
-                proxAgent:
-                while (iteratorAgent.hasNext()){
-                    String Agent = iteratorAgent.next();
-
-                    try{
-                        downloadStream = ColetorUtil.getUrlStream(Agent, proxUrl.getURL());
-                        //System.out.println("Download Stream open!");
-                        paginaColetada = ColetorUtil.consumeStream(downloadStream);
-                        System.out.println("pagina obtida!");
-                        List<String> links = extractLinks(paginaColetada);
-                        for(String link : links){
-                            if(ColetorUtil.isAbsoluteURL(link)){
-                                URLAddress nova = new URLAddress(link, proxUrl.getDepth()+1);
-                                e.countFetchedPage();
-                                System.out.println("Fetched!");
-                                return e.adicionaNovaPagina(nova);
-                            }else{
-                                URLAddress nova = new URLAddress(proxUrl.getAddress()+'/'+link, proxUrl.getDepth()+1);
-                                e.countFetchedPage();
-                                System.out.println("Fetched!");
-                                return e.adicionaNovaPagina(nova);
-                            }
-                        }
-                    }catch(Exception except){
-                        break proxAgent; 
-                    }
-                }
-                System.out.println("Agent not allowed!");
-                return false;
-            }else{
-                System.out.println("Record Robot not allowed!");
-                return false;        
-            }
-        }
-        System.out.println("Url not allowed!");
-        return false;
     }
     
+    public PageFetcher(){
+        
+    }
+            
+    public boolean pageRequest() throws MalformedURLException, IOException, Exception{
+        
+        RobotExclusion robotExclusion = new RobotExclusion();
+        
+//        Record rFB = robotExclusion.get(new URL("https://www.facebook.com/robots.txt"), "daniBot");
+//        System.out.println("Aceitou o fb index?" + rFB.allows("/index.html"));
+//        System.out.println("Aceitou o cgi-bin?" + rFB.allows("/cgi-bin/oioi"));
+//        System.out.println("Aceitou o fb o oioi?" + rFB.allows("/lala/oioi"));
+//        
+//        Record rTerra = robotExclusion.get(new URL("https://www.terra.com.br/robots.txt"), "daniBot");
+//        System.out.println("Aceitou o terra index?" + rTerra.allows("/index.html"));
+//        System.out.println("Aceitou o cgi-bin?" + rTerra.allows("/cgi-bin/oioi"));
+//        System.out.println("Aceitou o terra o oioi?" + rTerra.allows("/lala/oioi"));
+        
+        
+        
+        
+        
+        if(proxUrl != null){
+            //Verificando se o record ja esta disponivel no escalonador
+            recordRobot = e.getRecordAllowRobots(proxUrl);
+            
+            if(recordRobot == null){
+                //Record nao disponivel
+                System.out.println("\nRealizando requisicao");
+                
+                recordRobot = robotExclusion.get(new URL(proxUrl.getURL()+"robots.txt"), "arthurBot");
+                
+                System.out.println("Requisicao finalizada\n");
+                if(recordRobot == null){
+                    System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
+                    return false;      
+                }     
+            }
+            //Inserindo o record no escalonador para solicitacao futura
+            e.putRecorded(proxUrl.getAddress(), recordRobot);
+            
+            if(recordRobot.allows(proxUrl.getPath())){
+                InputStream download = ColetorUtil.getUrlStream("arthurBot", new URL(proxUrl.getAddress()));
+                String pagina = ColetorUtil.consumeStream(download);    //Nesse ponto ja e possivel imprimir o html da pagina
+                List<String> links = extractLinks(pagina);
+                //mostList(links);
+                
+                for(String link : links){
+                    if(ColetorUtil.isAbsoluteURL(link)){
+                        URLAddress nvpg = new URLAddress(link,proxUrl.getDepth()+1);
+                        if(e.adicionaNovaPagina(nvpg)){
+                            e.countFetchedPage();
+                            System.out.println("Link: "+link+" "+"adicionado.");
+                        }//else
+                            //System.out.println("Link: "+link+" "+"recusado.");
+                    }else{
+                        URLAddress nvpg = new URLAddress(proxUrl.getAddress()+proxUrl.getPath()+link,proxUrl.getDepth()+1);
+                        if(e.adicionaNovaPagina(nvpg)){
+                            e.countFetchedPage();
+                            System.out.println("Link: "+proxUrl.getAddress()+proxUrl.getPath()+link+" relativo adicionado.");
+                        }//else
+                            //System.out.println("Link: "+link+" "+"recusado.");
+                    }
+                }
+            }           
+        }
+        //System.out.println("Fim page request");
+        return true;
+    }
+    
+    public static void mostList(List<String> lista){
+        Iterator<String> listaAsIterator = lista.iterator();
+        while(listaAsIterator.hasNext()){
+            System.out.println(listaAsIterator.next());
+        }
+    }
     
     public static List<String>extractLinks(String pag) throws Exception { 
         final ArrayList<String> result = new ArrayList<String>(); 

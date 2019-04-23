@@ -12,6 +12,7 @@ import coletorri.Servidor;
 import coletorri.URLAddress;
 import com.trigonic.jrobotx.RecordIterator;
 import crawler.escalonadorCurtoPrazo.*;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -38,17 +39,14 @@ public class EscalonadorSimplesTeste {
         }
         
 	@Test
-	public static synchronized void testAdicionaRemovePagina() throws MalformedURLException, InterruptedException {
+	public static synchronized void testaPageFetcher() throws MalformedURLException, InterruptedException, IOException, Exception {
 		
                 Thread [] PageFetchers = new Thread [2]; 
-		URLAddress urlProf = new URLAddress("http://www.xpto.com.br/index.html",Integer.MAX_VALUE);
-		URLAddress urlTerra = new URLAddress("http://www.amazon.com/index.html",1);
-		URLAddress urlTerraRep = new URLAddress("http://www.terra.com.br/index.html",1);
+		URLAddress primeiraSemente = new URLAddress("https://www.globo.com/",1);
+		URLAddress segundaSemente = new URLAddress("https://www.amazon.com/",1);
+		URLAddress terceiraSemente = new URLAddress("https://www.americanas.com.br/",1);
 		URLAddress urlUOL1 = new URLAddress("http://www.uol.com.br/",1);
-		URLAddress urlUOL2 = new URLAddress("http://www.uol.com.br/profMax.html",1);
-		URLAddress urlGlobo = new URLAddress("http://www.globo.com.br/index.html",1);
 		long timeFirstHitUOL,timeSecondHitUOL; 
-		URLAddress u1,u2,u3;
 		
                 //Inicializando estados das threads
                 for(int i=0;i<2;i++){
@@ -60,77 +58,41 @@ public class EscalonadorSimplesTeste {
                 PageFetchers[i] = new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        
                             PageFetcher fetcher = new PageFetcher(e);
+                            System.out.println("Page Fetcher criado");
+                            
                             int id = ++fetcherid;//id da thread
+                            
                         try {
                             while(fetcherState[id]=(!e.finalizouColeta())){
-                                if(fetcher.pageRequest())
-                                    System.out.println("Thread "+id+": fetcherState true");
-                                else
-                                    System.out.println("Thread "+id+": fetcherState false");
+                                if(fetcher.pageRequest()){
+                                    //System.out.println("Pagina requisitada com sucesso");
+                                }else{
+                                    System.out.println("Falha na requisicao da pagina");
+                                }
                             }
+                            System.out.println("Fim teste Page Fetcher");
                             System.out.println("Thread "+id+": stop");
-                            this.wait();
-                            
                         } catch (MalformedURLException ex) {
                             //Logger.getLogger(EscalonadorSimplesTeste.class.getName()).log(Level.SEVERE, null, ex);
                         } catch (InterruptedException ex) {
+                            //Logger.getLogger(EscalonadorSimplesTeste.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (Exception ex) {
                             //Logger.getLogger(EscalonadorSimplesTeste.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         }
                     });
                 }
 		
-		e.adicionaNovaPagina(urlTerra);//terra
-		//e.adicionaNovaPagina(urlTerraRep);
-		timeFirstHitUOL = System.currentTimeMillis();
-		e.adicionaNovaPagina(urlUOL1);//uol1
+		e.adicionaNovaPagina(primeiraSemente);
+		//e.adicionaNovaPagina(segundaSemente);
+		//timeFirstHitUOL = System.currentTimeMillis();
+		//e.adicionaNovaPagina(terceiraSemente);
 		//e.adicionaNovaPagina(urlUOL2);//uol2
-		//e.adicionaNovaPagina(urlGlobo);
-		//e.adicionaNovaPagina(urlProf);//xpto
                 
-		//testa a ordem dos elementos
-		//u1 = e.getURL();
-		//u2 = e.getURL();
-		//u3 = e.getURL();
-		//URLAddress[] ordemEsperada = {urlTerra,urlUOL1,urlGlobo};
-		//URLAddress[] ordemFeita = {urlTerra,urlUOL1,urlGlobo};
-		
-		//o primeiro nao pode ser urlProf (profundidade infinita)
-		//assertNotSame("A URL '"+urlProf+"' deveria ser desconsiderada pois possui profundidade muito alta",urlProf,u1);
-		
-		
-		//verifica se está na ordem correta (os tres primeiros)
-		//for(int i = 0; i<ordemEsperada.length ; i++){
-		//	assertSame("o end. "+ordemEsperada[i]+" deveria ser o "+i+"º a sair (e deve ser o MESMO objeto)",
-				//	ordemEsperada[i],ordemFeita[i]);
-		//}
-		
-		
-		//resgata o 4o (UOL)
-		System.out.println("\n\nResgatando uma URL de um dominio que acaba de ser acessado... \n\n");
-		//URLAddress u4 = e.getURL();
-		//timeSecondHitUOL = System.currentTimeMillis();
+                System.out.println("Paginas adicionadas... ");
                 
-		//System.out.println(u4.getAddress().equals(urlTerraRep.getAddress()));
-                
-                
-//                
-//                Condicao u4.getAddress().equals(urlTerraRep.getAddress())
-                        
-                        
-		//testa se a url urlTerraRep foi adicionada (pois, assim, ela foi adicionada duas vezes já que urlTerra==urlTerraRep)
-		//if(u4.getAddress().equals(urlTerraRep.getAddress())){
-		//	assertTrue("A URL '"+urlTerraRep+"' foi adicionada duas vezes!",false);
-		//}
-
-		
-		//testa a espera para pegar o u4 (uol)		
-                //System.out.println("t1 = "+timeFirstHitUOL);
-                //System.out.println("t2 = "+timeSecondHitUOL);
-                
-		//assertTrue("O tempo de espera entre duas requisições do mesmo servidor não foi maior que "+Servidor.ACESSO_MILIS,(timeSecondHitUOL-timeFirstHitUOL)>Servidor.ACESSO_MILIS);
-		
                 //Inicializando as Threads
                 for(int i=0;i<2;i++){
                     PageFetchers[i].start();
@@ -149,21 +111,17 @@ public class EscalonadorSimplesTeste {
                 }
                 
                 //Interrompendo as threads
-                for(int i=0;i<2;i++){
-                    System.out.println("Terminou Thread: "+i);
-                    PageFetchers[i].interrupt();
-                }
+                //for(int i=0;i<2;i++){
+                  //  System.out.println("Terminou Thread: "+i);
+                    //PageFetchers[i].interrupt();
+                //}
                 
                 System.out.println("Terminou testAdicionaRemovePagina ");
-                //System.out.println("LOGS: " + RecordIterator.LOG.getLoggerRepository().getCurrentLoggers().toString());
-	}
+		
+        }
         
-
-        
-        public static void main(String[] args) throws MalformedURLException, InterruptedException{	
-//            testServidor();
-            testAdicionaRemovePagina();
-	}
-        
-
-}
+        public static void main(String[] args) throws MalformedURLException, InterruptedException, IOException, Exception{
+            System.out.println("Inicio main");
+            testaPageFetcher();
+        }
+}    

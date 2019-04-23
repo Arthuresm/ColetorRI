@@ -99,8 +99,7 @@ public class RecordIterator extends AbstractIterator<Record> {
 				List<String[]> rules = new ArrayList<String[]>();
 				boolean inUserAgents = true;
                                 
-                                //LOG.info("Tentando...");
-                                System.out.println("Tentando...");
+                                //System.out.println("Tentando...");
 				String line;
                                 
                                 /*
@@ -129,9 +128,9 @@ public class RecordIterator extends AbstractIterator<Record> {
 					}
 				}
 				
-                                //LOG.info("Leitura completa!");
-                                System.out.println("Leitura completa!"+'\n'+ "Agents: "+userAgents.toString()
-                                    +'\n'+"Rules: "+rules.toString());
+                                
+                                //System.out.println("Leitura completa!"+'\n'+ "Agents: "+userAgents.toString()
+                                //    +'\n'+"Rules: "+rules.toString());
                                 
 				if (line == null) {
                                     IOUtils.closeQuietly(reader);
@@ -139,26 +138,26 @@ public class RecordIterator extends AbstractIterator<Record> {
 				}
                                 
 				if (userAgents.size() > 0 || rules.size() > 0) {
-                                    //LOG.info("defaultRecord montado!");
-                                    System.out.println("defaultRecord montado!");
+                                  
+                                  //  System.out.println("defaultRecord montado!");
 				    defaultRecord = new Record(userAgents, rules);
 				}
 			} catch (IOException e) {
 			    // TODO: how to handle this appropriately?
 				LOG.info("read failed", e);
-                                System.out.println("Read falhou 1!");
+                                //System.out.println("Read falhou 1!");
 			}
 			
 			if (defaultRecord != null) {
 				return new Record(defaultRecord.getUserAgents(),defaultRecord.getRules());
 			}else{
-                            //LOG.info("defaultRecord mal formado!");
+                            
                             //System.out.println("defaultRecord mal formado!");
                             return null;
                         }
 		}
-                //LOG.info("Read falhou 2!");
-                System.out.println("Read falhou 2!");
+                
+                //System.out.println("Read falhou 2!");
 		return null;
 	}
 	
