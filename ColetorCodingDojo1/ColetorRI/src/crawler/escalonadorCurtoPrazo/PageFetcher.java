@@ -71,10 +71,6 @@ public class PageFetcher {
 //        System.out.println("Aceitou o cgi-bin?" + rTerra.allows("/cgi-bin/oioi"));
 //        System.out.println("Aceitou o terra o oioi?" + rTerra.allows("/lala/oioi"));
         
-        
-        
-        
-        
         if(proxUrl != null){
             //Verificando se o record ja esta disponivel no escalonador
             recordRobot = e.getRecordAllowRobots(proxUrl);
@@ -86,6 +82,7 @@ public class PageFetcher {
                 recordRobot = robotExclusion.get(new URL(proxUrl.getURL()+"robots.txt"), "arthurBot");
                 
                 System.out.println("Requisicao finalizada\n");
+                
                 if(recordRobot == null){
                     System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
                     return false;      

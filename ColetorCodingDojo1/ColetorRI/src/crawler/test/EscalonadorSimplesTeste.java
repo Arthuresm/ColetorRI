@@ -21,6 +21,67 @@ public class EscalonadorSimplesTeste {
         private static int fetcherid = -1;
         private static boolean [] fetcherState = new boolean[2];
         
+        @Test
+	public static synchronized void testAdicionaRemovePagina() throws MalformedURLException, InterruptedException {
+		
+		URLAddress urlProf = new URLAddress("http://www.xpto.com.br/index.html",Integer.MAX_VALUE);
+		URLAddress urlAmazon = new URLAddress("http://www.terra.com.br/index.html",1);
+		URLAddress urlTerraRep = new URLAddress("http://www.terra.com.br/index.html",1);
+		URLAddress urlUOL1 = new URLAddress("http://www.uol.com.br/",1);
+		URLAddress urlUOL2 = new URLAddress("http://www.uol.com.br/profMax.html",1);
+		URLAddress urlGlobo = new URLAddress("http://www.globo.com.br/index.html",1);
+		long timeFirstHitUOL,timeSecondHitUOL; 
+		URLAddress u1,u2,u3;
+		
+
+		e.adicionaNovaPagina(urlAmazon);//amazon
+		e.adicionaNovaPagina(urlTerraRep);
+		timeFirstHitUOL = System.currentTimeMillis();
+		e.adicionaNovaPagina(urlUOL1);//uol1
+		e.adicionaNovaPagina(urlUOL2);//uol2
+		e.adicionaNovaPagina(urlGlobo);
+		e.adicionaNovaPagina(urlProf);//xpto
+                
+		//testa a ordem dos elementos
+		u1 = e.getURL();
+		u2 = e.getURL();
+		u3 = e.getURL();
+		URLAddress[] ordemEsperada = {urlAmazon,urlUOL1,urlGlobo};
+		URLAddress[] ordemFeita = {urlAmazon,urlUOL1,urlGlobo};
+		
+		//o primeiro nao pode ser urlProf (profundidade infinita)
+		assertNotSame("A URL '"+urlProf+"' deveria ser desconsiderada pois possui profundidade muito alta",urlProf,u1);
+		
+		//verifica se está na ordem correta (os tres primeiros)
+		for(int i = 0; i<ordemEsperada.length ; i++){
+			assertSame("o end. "+ordemEsperada[i]+" deveria ser o "+i+"º a sair (e deve ser o MESMO objeto)",
+					ordemEsperada[i],ordemFeita[i]);
+		}
+		
+		//resgata o 4o (UOL)
+		System.out.println("\n\nResgatando uma URL de um dominio que acaba de ser acessado... \n\n");
+		URLAddress u4 = e.getURL();
+		timeSecondHitUOL = System.currentTimeMillis();
+                
+		System.out.println(u4.getAddress().equals(urlTerraRep.getAddress()));
+                      
+                //Condicao u4.getAddress().equals(urlTerraRep.getAddress())
+                        
+                        
+		//testa se a url urlTerraRep foi adicionada (pois, assim, ela foi adicionada duas vezes já que urlTerra==urlTerraRep)
+		if(u4.getAddress().equals(urlTerraRep.getAddress())){
+			assertTrue("A URL '"+urlTerraRep+"' foi adicionada duas vezes!",false);
+		}
+                
+		//testa a espera para pegar o u4 (uol)		
+                System.out.println("t1 = "+timeFirstHitUOL);
+                System.out.println("t2 = "+timeSecondHitUOL);
+                
+		assertTrue("O tempo de espera entre duas requisições do mesmo servidor não foi maior que "+Servidor.ACESSO_MILIS,(timeSecondHitUOL-timeFirstHitUOL)>Servidor.ACESSO_MILIS);
+		              
+                System.out.println("Terminou testAdicionaRemovePagina ");
+        }
+        
 	@Test
 	public synchronized void testServidor() {
 		Servidor s= new Servidor("xpto.com");
@@ -116,12 +177,13 @@ public class EscalonadorSimplesTeste {
                     //PageFetchers[i].interrupt();
                 //}
                 
-                System.out.println("Terminou testAdicionaRemovePagina ");
-		
+                System.out.println("Terminou testaPageFetcher");
         }
         
         public static void main(String[] args) throws MalformedURLException, InterruptedException, IOException, Exception{
             System.out.println("Inicio main");
+            //testServidor();
+            //testAdicionaRemovePagina();
             testaPageFetcher();
         }
 }    

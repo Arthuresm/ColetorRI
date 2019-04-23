@@ -101,12 +101,7 @@ public class RecordIterator extends AbstractIterator<Record> {
                                 
                                 //System.out.println("Tentando...");
 				String line;
-                                
-                                /*
-                                    O codigo abaixo está retornando os arranjos 
-                                    userAgents e rules vazios.
-                                */
-                                
+     
 				while ((line = readLine()) != null) {
 					String[] pieces = splitLine(line);
 					if (pieces[0].equals("")) {
