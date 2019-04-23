@@ -85,6 +85,8 @@ public class PageFetcher {
                 
                 if(recordRobot == null){
                     System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
+                    if(e.retiraPagina(proxUrl))
+                        System.out.println("Pagina retirada");
                     return false;      
                 }     
             }
@@ -114,7 +116,12 @@ public class PageFetcher {
                             //System.out.println("Link: "+link+" "+"recusado.");
                     }
                 }
-            }           
+            }else{
+                System.out.println("Nao possui autorizacao para coletar a pagina");
+                if(e.retiraPagina(proxUrl))
+                    System.out.println("Pagina retirada");
+                return false;
+            }          
         }
         //System.out.println("Fim page request");
         return true;
