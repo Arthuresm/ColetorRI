@@ -107,7 +107,7 @@ public class EscalonadorSimplesTeste {
 		URLAddress primeiraSemente = new URLAddress("https://www.globo.com/",1);
 		URLAddress segundaSemente = new URLAddress("https://www.amazon.com/",1);
 		URLAddress terceiraSemente = new URLAddress("https://www.americanas.com.br/",1);
-		URLAddress quartaSemente = new URLAddress("http://www.reuters.com/",1);
+		URLAddress quartaSemente = new URLAddress("https://www.reuters.com/",1);
 		long timeFirstHitUOL,timeSecondHitUOL; 
 		
                 //Inicializando estados das threads
@@ -147,10 +147,10 @@ public class EscalonadorSimplesTeste {
                     });
                 }
 		
-		e.adicionaNovaPagina(primeiraSemente);
+		//e.adicionaNovaPagina(primeiraSemente);
 		//e.adicionaNovaPagina(segundaSemente);
 		//e.adicionaNovaPagina(terceiraSemente);
-		//e.adicionaNovaPagina(quartaSemente);
+		e.adicionaNovaPagina(quartaSemente);
                 
                 System.out.println("Paginas sementes adicionadas... ");
                 
