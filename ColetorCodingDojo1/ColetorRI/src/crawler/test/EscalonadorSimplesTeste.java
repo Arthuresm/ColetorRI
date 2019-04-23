@@ -19,7 +19,8 @@ import java.util.logging.Logger;
 public class EscalonadorSimplesTeste {
 	private static EscalonadorSimples e = new EscalonadorSimples();
         private static int fetcherid = -1;
-        private static boolean [] fetcherState = new boolean[2];
+        private static int numThreads = 10;
+        private static boolean [] fetcherState = new boolean[numThreads];
         
         @Test
 	public static synchronized void testAdicionaRemovePagina() throws MalformedURLException, InterruptedException {
@@ -102,39 +103,39 @@ public class EscalonadorSimplesTeste {
 	@Test
 	public static synchronized void testaPageFetcher() throws MalformedURLException, InterruptedException, IOException, Exception {
 		
-                Thread [] PageFetchers = new Thread [2]; 
+                Thread [] PageFetchers = new Thread [numThreads]; 
 		URLAddress primeiraSemente = new URLAddress("https://www.globo.com/",1);
 		URLAddress segundaSemente = new URLAddress("https://www.amazon.com/",1);
 		URLAddress terceiraSemente = new URLAddress("https://www.americanas.com.br/",1);
-		URLAddress urlUOL1 = new URLAddress("http://www.uol.com.br/",1);
+		URLAddress quartaSemente = new URLAddress("http://www.reuters.com/",1);
 		long timeFirstHitUOL,timeSecondHitUOL; 
 		
                 //Inicializando estados das threads
-                for(int i=0;i<2;i++){
+                for(int i=0;i<numThreads;i++){
                     fetcherState[i]=false;
                 }
                 
                 //Declarando as threads
-                for(int i=0;i<2;i++){
+                for(int i=0;i<numThreads;i++){
                 PageFetchers[i] = new Thread(new Runnable() {
                     @Override
                     public void run() {
                         
                             PageFetcher fetcher = new PageFetcher(e);
-                            System.out.println("Page Fetcher criado");
                             
                             int id = ++fetcherid;//id da thread
+                            
+                            //System.out.println("Page Fetcher "+id+" criado");
                             
                         try {
                             while(fetcherState[id]=(!e.finalizouColeta())){
                                 if(fetcher.pageRequest()){
                                     //System.out.println("Pagina requisitada com sucesso");
                                 }else{
-                                    System.out.println("Falha na requisicao da pagina");
+                                    System.out.println("Thread "+id+": Falha na requisicao da pagina");
                                 }
                             }
-                            System.out.println("Fim teste Page Fetcher");
-                            System.out.println("Thread "+id+": stop");
+                            System.out.println("Thread "+id+": Fim teste Page Fetcher");
                         } catch (MalformedURLException ex) {
                             //Logger.getLogger(EscalonadorSimplesTeste.class.getName()).log(Level.SEVERE, null, ex);
                         } catch (InterruptedException ex) {
@@ -148,14 +149,13 @@ public class EscalonadorSimplesTeste {
 		
 		e.adicionaNovaPagina(primeiraSemente);
 		//e.adicionaNovaPagina(segundaSemente);
-		//timeFirstHitUOL = System.currentTimeMillis();
 		//e.adicionaNovaPagina(terceiraSemente);
-		//e.adicionaNovaPagina(urlUOL2);//uol2
+		//e.adicionaNovaPagina(quartaSemente);
                 
-                System.out.println("Paginas adicionadas... ");
+                System.out.println("Paginas sementes adicionadas... ");
                 
                 //Inicializando as Threads
-                for(int i=0;i<2;i++){
+                for(int i=0;i<numThreads;i++){
                     PageFetchers[i].start();
                 }
                 
@@ -181,7 +181,7 @@ public class EscalonadorSimplesTeste {
         }
         
         public static void main(String[] args) throws MalformedURLException, InterruptedException, IOException, Exception{
-            System.out.println("Inicio main");
+            System.out.println("Coletor RI - Inicio main:");
             //testServidor();
             //testAdicionaRemovePagina();
             testaPageFetcher();

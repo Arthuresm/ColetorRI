@@ -139,7 +139,7 @@ public class RecordIterator extends AbstractIterator<Record> {
 				}
 			} catch (IOException e) {
 			    // TODO: how to handle this appropriately?
-				LOG.info("read failed", e);
+				//LOG.info("read failed", e);
                                 //System.out.println("Read falhou 1!");
 			}
 			

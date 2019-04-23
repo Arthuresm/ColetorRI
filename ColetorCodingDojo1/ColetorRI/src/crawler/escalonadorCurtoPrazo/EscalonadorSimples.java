@@ -31,7 +31,7 @@ public class EscalonadorSimples implements Escalonador{
         public HashMap<Servidor, Record> mapServRecord = new HashMap<>();
         public int contadorPaginas = 0;
         
-        public int limitePaginas = 10;
+        public int limitePaginas = 300;
         
         
 	@Override

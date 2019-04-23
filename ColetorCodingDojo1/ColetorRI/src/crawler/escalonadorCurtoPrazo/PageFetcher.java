@@ -77,11 +77,11 @@ public class PageFetcher {
             
             if(recordRobot == null){
                 //Record nao disponivel
-                System.out.println("\nRealizando requisicao");
+                //System.out.println("\nRealizando requisicao");
                 
                 recordRobot = robotExclusion.get(new URL(proxUrl.getURL()+"robots.txt"), "arthurBot");
                 
-                System.out.println("Requisicao finalizada\n");
+                //System.out.println("Requisicao finalizada\n");
                 
                 if(recordRobot == null){
                     System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
@@ -102,14 +102,14 @@ public class PageFetcher {
                         URLAddress nvpg = new URLAddress(link,proxUrl.getDepth()+1);
                         if(e.adicionaNovaPagina(nvpg)){
                             e.countFetchedPage();
-                            System.out.println("Link: "+link+" "+"adicionado.");
+                            System.out.println("Link: "+link+" coletado.");
                         }//else
                             //System.out.println("Link: "+link+" "+"recusado.");
                     }else{
                         URLAddress nvpg = new URLAddress(proxUrl.getAddress()+proxUrl.getPath()+link,proxUrl.getDepth()+1);
                         if(e.adicionaNovaPagina(nvpg)){
                             e.countFetchedPage();
-                            System.out.println("Link: "+proxUrl.getAddress()+proxUrl.getPath()+link+" relativo adicionado.");
+                            System.out.println("Link: "+proxUrl.getAddress()+proxUrl.getPath()+link+" relativo coletado.");
                         }//else
                             //System.out.println("Link: "+link+" "+"recusado.");
                     }
