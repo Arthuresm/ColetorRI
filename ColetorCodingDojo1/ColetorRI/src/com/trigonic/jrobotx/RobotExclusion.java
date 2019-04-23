@@ -76,7 +76,7 @@ public class RobotExclusion {
 			recordIter = new RecordIterator(in);//urlInputStreamFactory.openStream(robotsUrl));
                         return new RecordIterator(in);
 		} catch (IOException e) {
-                        System.out.println("Impossivel criar o record para "+url.getHost()+"robots.txt");
+                        //System.out.println("Impossivel criar o record para "+url.getHost()+"robots.txt");
 			//LOG.info("Failed to fetch " + url, e);
 		}
 

@@ -31,7 +31,7 @@ public class EscalonadorSimples implements Escalonador{
         public HashMap<Servidor, Record> mapServRecord = new HashMap<>();
         public int contadorPaginas = 0;
         
-        public int limitePaginas = 300;
+        public int limitePaginas = 500;
         
         
 	@Override
@@ -174,23 +174,28 @@ public class EscalonadorSimples implements Escalonador{
 		
 	}
 
-	public boolean retiraPagina(URLAddress linkARetirar){
+	public synchronized boolean retiraPagina(URLAddress linkARetirar){
             Servidor serv = new Servidor(linkARetirar.getDomain());
+            
+            System.out.println("\n\n\nImpossivel criar o record para robots.txt, tentando tirar pagina "+linkARetirar.getURL()+ " do escalonador");
+            
             if(map.containsKey(serv)){
-                if(map.get(serv).contains(linkARetirar)){
-                    map.get(serv).remove(linkARetirar);
-                    if(filaPaginas.contains(linkARetirar)){
-                        filaPaginas.remove(linkARetirar);
-                    }
-                    System.out.println("Retirando " + linkARetirar.getAddress());
-                    return true;
+                map.remove(serv);    
+                System.out.println("\nRetirado do map: " + linkARetirar.getAddress());
+
+                if(filaServidores.remove(serv))
+                    System.out.println("Retirado da filaServidores: " + linkARetirar.getAddress());
+
+                if(filaPaginas.remove(linkARetirar))
+                    System.out.println("Retirado da filaPaginas: " + linkARetirar.getAddress());
+
+                if(mapServRecord.containsKey(serv)){
+                    mapServRecord.remove(serv);    
+                    System.out.println("Retirado do mapServRecord: " + linkARetirar.getAddress());
                 }
-            }
-            if(filaPaginas.contains(linkARetirar)){
-                System.out.println("Retirando " + linkARetirar.getAddress());
-                filaPaginas.remove(linkARetirar);
+                
                 return true;
-            }
-            return false;
+            }else
+                return false;
         }	
 }

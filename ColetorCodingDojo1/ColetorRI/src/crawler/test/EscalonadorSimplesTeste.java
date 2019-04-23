@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class EscalonadorSimplesTeste {
 	private static EscalonadorSimples e = new EscalonadorSimples();
         private static int fetcherid = -1;
-        private static int numThreads = 10;
+        private static int numThreads = 100;
         private static boolean [] fetcherState = new boolean[numThreads];
         
         @Test
@@ -91,7 +91,7 @@ public class EscalonadorSimplesTeste {
 		assertTrue("Como ele acabou de ser acessado, ele não pode estar acessivel",!s.isAccessible());
 		try {
 			System.out.println("Aguardando "+(Servidor.ACESSO_MILIS+1000)+" milisegundos...");
-			this.wait(Servidor.ACESSO_MILIS+1000L);
+                        this.wait(Servidor.ACESSO_MILIS+1000L);
 		} catch (InterruptedException exc) {
 			// TODO Auto-generated catch block
 			exc.printStackTrace();
@@ -132,7 +132,7 @@ public class EscalonadorSimplesTeste {
                                 if(fetcher.pageRequest()){
                                     //System.out.println("Pagina requisitada com sucesso");
                                 }else{
-                                    System.out.println("Thread "+id+": Falha na requisicao da pagina");
+                                    //System.out.println("Thread "+id+": Falha na requisicao da pagina");
                                 }
                             }
                             System.out.println("Thread "+id+": Fim teste Page Fetcher");
@@ -147,9 +147,9 @@ public class EscalonadorSimplesTeste {
                     });
                 }
 		
-		//e.adicionaNovaPagina(primeiraSemente);
-		//e.adicionaNovaPagina(segundaSemente);
-		//e.adicionaNovaPagina(terceiraSemente);
+		e.adicionaNovaPagina(primeiraSemente);
+		e.adicionaNovaPagina(segundaSemente);
+		e.adicionaNovaPagina(terceiraSemente);
 		e.adicionaNovaPagina(quartaSemente);
                 
                 System.out.println("Paginas sementes adicionadas... ");
@@ -165,7 +165,7 @@ public class EscalonadorSimplesTeste {
                 while(!e.finalizouColeta()){
                     if(fetcherState[aux])
                         finished++;
-                    if(aux==1)
+                    if(aux==numThreads-1)
                         aux=0;
                     else
                         aux++;
@@ -177,9 +177,10 @@ public class EscalonadorSimplesTeste {
                     //PageFetchers[i].interrupt();
                 //}
                 
-                System.out.println("Terminou testaPageFetcher");
+                System.out.println("\n\nTerminou testaPageFetcher\n");
         }
         
+        @Test
         public static void testeRemovePagina() throws MalformedURLException{
             URLAddress primeiraSemente = new URLAddress("https://www.globo.com/",1);
             URLAddress segundaSemente = new URLAddress("https://www.amazon.com/",1);
@@ -203,7 +204,8 @@ public class EscalonadorSimplesTeste {
         
         public static void main(String[] args) throws MalformedURLException, InterruptedException, IOException, Exception{
             System.out.println("Coletor RI - Inicio main:");
-            //testServidor();
+            //EscalonadorSimplesTeste teste = new EscalonadorSimplesTeste();
+            //teste.testServidor();
             //testAdicionaRemovePagina();
             testaPageFetcher();
             

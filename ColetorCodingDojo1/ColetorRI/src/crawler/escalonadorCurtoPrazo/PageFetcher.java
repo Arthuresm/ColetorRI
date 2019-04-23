@@ -48,9 +48,7 @@ public class PageFetcher {
     private URLAddress proxUrl;
     
     public PageFetcher (EscalonadorSimples e){
-        this.e = e;
-        this.proxUrl = e.getURL();
-        
+        this.e = e;  
     }
     
     public PageFetcher(){
@@ -60,7 +58,7 @@ public class PageFetcher {
     public boolean pageRequest() throws MalformedURLException, IOException, Exception{
         
         RobotExclusion robotExclusion = new RobotExclusion();
-        
+        proxUrl = e.getURL();
 //        Record rFB = robotExclusion.get(new URL("https://www.facebook.com/robots.txt"), "daniBot");
 //        System.out.println("Aceitou o fb index?" + rFB.allows("/index.html"));
 //        System.out.println("Aceitou o cgi-bin?" + rFB.allows("/cgi-bin/oioi"));
@@ -84,9 +82,9 @@ public class PageFetcher {
                 //System.out.println("Requisicao finalizada\n");
                 
                 if(recordRobot == null){
-                    System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
+                    //System.out.println("Impossivel criar o record para "+proxUrl.getURL()+"robots.txt");
                     if(e.retiraPagina(proxUrl))
-                        System.out.println("Pagina retirada");
+                        System.out.println("Pagina retirada do Escalonador"+'\n'+'\n');
                     return false;      
                 }     
             }
