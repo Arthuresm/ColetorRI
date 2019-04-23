@@ -174,5 +174,23 @@ public class EscalonadorSimples implements Escalonador{
 		
 	}
 
-	
+	public boolean retiraPagina(URLAddress linkARetirar){
+            Servidor serv = new Servidor(linkARetirar.getDomain());
+            if(map.containsKey(serv)){
+                if(map.get(serv).contains(linkARetirar)){
+                    map.get(serv).remove(linkARetirar);
+                    if(filaPaginas.contains(linkARetirar)){
+                        filaPaginas.remove(linkARetirar);
+                    }
+                    System.out.println("Retirando " + linkARetirar.getAddress());
+                    return true;
+                }
+            }
+            if(filaPaginas.contains(linkARetirar)){
+                System.out.println("Retirando " + linkARetirar.getAddress());
+                filaPaginas.remove(linkARetirar);
+                return true;
+            }
+            return false;
+        }	
 }

@@ -180,10 +180,32 @@ public class EscalonadorSimplesTeste {
                 System.out.println("Terminou testaPageFetcher");
         }
         
+        public static void testeRemovePagina() throws MalformedURLException{
+            URLAddress primeiraSemente = new URLAddress("https://www.globo.com/",1);
+            URLAddress segundaSemente = new URLAddress("https://www.amazon.com/",1);
+            URLAddress terceiraSemente = new URLAddress("https://www.americanas.com.br/",1);
+            URLAddress urlUOL1 = new URLAddress("http://www.uol.com.br/",1);
+            
+            e.adicionaNovaPagina(urlUOL1);
+            e.adicionaNovaPagina(primeiraSemente);
+            e.adicionaNovaPagina(segundaSemente);
+            e.adicionaNovaPagina(terceiraSemente);
+            
+            if(e.retiraPagina(segundaSemente)){
+                System.out.println("Retirado com sucesso");
+                if(!e.retiraPagina(new URLAddress("https://www.google.com/",1))){
+                    System.out.println("Metodo funcionou perfeitamente!");
+                }
+            }else 
+                System.out.println("Metodo falhou");
+            
+        }
+        
         public static void main(String[] args) throws MalformedURLException, InterruptedException, IOException, Exception{
             System.out.println("Coletor RI - Inicio main:");
             //testServidor();
             //testAdicionaRemovePagina();
             testaPageFetcher();
+            
         }
 }    
