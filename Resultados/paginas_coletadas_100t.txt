@@ -1,0 +1,889 @@
+ant -f C:\\Users\\Bruno\\Desktop\\Coletor\\ColetorRI\\ColetorCodingDojo1\\ColetorRI -Djavac.includes=crawler/test/EscalonadorSimplesTeste.java -Dnb.internal.action.name=run.single -Drun.class=crawler.test.EscalonadorSimplesTeste run-single
+init:
+Deleting: C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\built-jar.properties
+deps-jar:
+Updating property file: C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\built-jar.properties
+Compiling 1 source file to C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\classes
+compile-single:
+run-single:
+Coletor RI - Inicio main:
+Paginas sementes adicionadas... 
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://www.amazon.com/ do escalonador
+
+Retirado do map: https://www.amazon.com/
+Retirado da filaServidores: https://www.amazon.com/
+Pagina retirada do Escalonador
+
+
+Link: https://www.globo.com// relativo coletado.
+Link: http://g1.globo.com/ coletado.
+Link: http://globoesporte.globo.com/ coletado.
+Link: https://gshow.globo.com/ coletado.
+Link: http://www.techtudo.com.br/ coletado.
+Link: https://globoplay.globo.com/ coletado.
+Link: https://oglobo.globo.com/brasil/defesa-de-lula-tenta-adiar-julgamento-de-caso-do-triplex-no-stj-23616378 coletado.
+Link: https://g1.globo.com/politica/noticia/2019/04/23/stj-julga-nesta-terca-recurso-de-lula-contra-condenacao-saiba-o-que-pode-ser-decidido.ghtml coletado.
+Link: https://g1.globo.com/politica/noticia/2019/04/23/bolsonaro-convoca-ministros-a-cerimonia-de-hasteamento-da-bandeira-antes-de-reuniao.ghtml coletado.
+Link: https://g1.globo.com/globonews/em-foco-com-andreia-sadi/post/2019/04/23/para-ministros-olavo-age-para-desunir-militares-e-reacao-de-bolsonaro-esvazia-guru.ghtml coletado.
+Link: https://oglobo.globo.com/brasil/veja-convite-para-palestra-de-mourao-nos-eua-que-irritou-carlos-bolsonaro-23616335 coletado.
+Link: https://oglobo.globo.com/brasil/carlos-bolsonaro-critica-mourao-apos-nota-do-pai-com-represalia-olavo-de-carvalho-23616240 coletado.
+Link: https://g1.globo.com/politica/noticia/2019/04/23/governo-aguarda-resposta-sobre-mudancas-na-proposta-da-previdencia-antes-de-sessao-da-ccj.ghtml coletado.
+Link: https://g1.globo.com/politica/blog/andreia-sadi/post/2019/04/23/planalto-aposta-em-pressao-de-maia-sobre-centrao-e-francischini-afasta-novo-adiamento-na-ccj.ghtml coletado.
+Link: https://g1.globo.com/politica/blog/matheus-leitao/post/2019/04/23/ex-chanceler-de-dilma-e-indicado-para-embaixada-do-egito-diplomatas-veem-rebaixamento.ghtml coletado.
+Link: https://g1.globo.com/economia/imposto-de-renda/2019/noticia/2019/04/23/a-uma-semana-do-fim-do-prazo-quase-13-milhoes-ainda-nao-declararam-ir.ghtml coletado.
+Link: https://g1.globo.com/economia/noticia/2019/04/23/numero-de-passageiros-transportados-pela-avianca-brasil-diminui-10percent-em-marco.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/sao-paulo/noticia/bastidores-doping-de-gonzalo-carneiro-no-sao-paulo-tem-choro-com-cuca-e-depressao.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/flamengo/noticia/fim-de-jejum-pressao-altitude-o-que-espera-o-flamengo-no-jogo-de-vida-ou-morte-para-ldu.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/flamengo/noticia/flamengo-e-punido-por-atraso-contra-o-penarol-e-abel-esta-suspenso-do-jogo-contra-a-ldu.ghtml coletado.
+Link: https://oglobo.globo.com/esportes/os-50-maiores-jogadores-do-brasileirao-de-pontos-corridos-parte-2-do-40-ao-31-23615973 coletado.
+Link: https://gshow.globo.com/novelas/o-setimo-guardiao/vem-por-ai/noticia/judith-fica-perplexa-com-descoberta-sobre-novo-guardiao.ghtml coletado.
+Link: https://extra.globo.com/tv-e-lazer/telinha/o-setimo-guardiao-ondina-descobre-que-luz-sua-filha-23615246.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-diana-fugira-de-casa-apos-flagra-de-nicolau.html coletado.
+Link: https://gshow.globo.com/novelas/verao-90/vem-por-ai/noticia/larissa-da-surra-em-vanessa-veja-fotos.ghtml coletado.
+Link: https://gshow.globo.com/novelas/orfaos-da-terra/noticia/em-orfaos-da-terra-jamil-pede-a-mao-de-laila-em-casamento.ghtml coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-hussein-prometera-vinganca-pela-morte-de-soraia.html coletado.
+Link: https://extra.globo.com/tv-e-lazer/telinha/orfaos-da-terra-missade-vai-viver-romance-com-padre-zoran-23615293.html coletado.
+Link: https://globoesporte.globo.com/cartola-fc/ coletado.
+Link: https://globoesporte.globo.com/cartola-fc/votacao/qual-o-melhor-atacante-para-as-dicas-economicas-da-rodada-1-07d06547-392c-4b5e-89d2-fed18eb44c08.ghtml coletado.
+Link: https://globoesporte.globo.com/programas/esporte-espetacular/noticia/estudo-de-campo-como-montar-um-time-com-c-100-para-mitar-na-rodada-1-do-cartola-fc.ghtml coletado.
+Link: https://cartolafc.globo.com/assine.html?origemId=483 coletado.
+Link: https://gshow.globo.com/programas/encontro-com-fatima-bernardes/noticia/tragedia-de-muzema-sobrevivente-usou-tecnicas-de-ioga-e-meditacao-para-se-manter-calmo.ghtml coletado.
+Link: https://revistamarieclaire.globo.com/Mulheres-do-Mundo/noticia/2019/04/samia-bomfim-antes-eram-politicos-fundamentalistas-agora-sao-deputadas-reacionarias-que-atacam-os-direitos-das-mulheres.html coletado.
+Link: https://g1.globo.com/sp/santos-regiao/noticia/2019/04/23/homem-confessa-ter-matado-menina-de-6-anos-apos-festa-por-vinganca-diz-policia.ghtml coletado.
+Link: https://g1.globo.com/economia/noticia/2019/04/23/falta-de-acesso-a-saneamento-basico-resulta-em-baixa-renda-e-gasto-com-internacoes-diz-estudo.ghtml coletado.
+Link: https://extra.globo.com/famosos/mc-koringa-recebe-alta-apos-cirurgia-para-retirar-tumor-no-ouvido-agradece-apoio-23616354.html coletado.
+Link: https://www.techtudo.com.br/noticias/2019/04/huawei-p30-pro-vs-xiaomi-mi-9-compare-preco-e-ficha-tecnica.ghtml coletado.
+Link: https://www.techtudo.com.br/noticias/2019/04/notebook-alienware-area-51m-e-bom-veja-analise-de-ficha-tecnica-e-preco.ghtml coletado.
+Link: https://g1.globo.com/mundo/noticia/2019/04/23/investigacao-aponta-que-atentados-em-sri-lanka-ocorreram-em-represalia-a-ataques-na-nova-zelandia-diz-ministro.ghtml coletado.
+Link: https://g1.globo.com/mundo/noticia/2019/04/23/a-mulher-que-salvou-homem-do-corredor-da-morte-apos-26-anos-preso-injustamente.ghtml coletado.
+Link: https://g1.globo.com/ coletado.
+Link: https://globoesporte.globo.com/futebol/times/corinthians/noticia/fora-da-final-junior-urso-pediu-para-se-concentrar-no-corinthians-e-arrancou-camisa-apos-gol-do-tri.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/corinthians/noticia/titulo-a-titulo-veja-o-numero-de-conquistas-dos-jogadores-do-elenco-do-corinthians.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/libertadores/noticia/rivais-irregulares-animam-semana-brasileira-na-libertadores-exceto-nos-casos-de-gremio-e-atletico-mg.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/palmeiras/noticia/radar-dos-emprestados-veja-como-os-jogadores-do-palmeiras-estao-se-saindo-em-outros-clubes.ghtml coletado.
+Link: https://globoesporte.globo.com/rs/futebol/times/gremio/noticia/com-garantia-de-renato-gremio-enfrenta-o-libertad-para-definir-futuro-na-libertadores.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/times/fluminense/noticia/conca-encerra-sonho-fantastico-no-futebol-e-mira-futuro-no-golfe.ghtml coletado.
+Link: https://globoesporte.globo.com/motor/formula-1/noticia/lewis-e-o-primeiro-piloto-que-coloco-no-mesmo-nivel-do-ayrton-diz-ex-companheiro-de-senna.ghtml coletado.
+Link: https://globoesporte.globo.com/futebol/selecao-brasileira/noticia/tite-quer-ver-vinicius-junior-em-campo-expectativa-e-do-garoto-ficar-no-banco-na-quinta-pelo-real.ghtml coletado.
+Link: https://sportv.globo.com/site/nba/noticia/felipe-dos-anjos-e-tulio-da-silva-seguem-os-passos-de-yago-e-didi-e-se-inscrevem-no-draft-da-nba.ghtml coletado.
+Link: https://globoesporte.globo.com/ coletado.
+Link: https://globoesporte.globo.com/placar-ge/hoje/jogos.ghtml coletado.
+Link: https://revistamarieclaire.globo.com/Celebridades/noticia/2019/04/sabrina-petraglia-relembra-desejo-estranho-na-gravidez.html coletado.
+Link: https://revistamarieclaire.globo.com/Casamento/noticia/2019/04/carol-dantas-fara-casamento-para-300-convidados-no-interior-de-sao-paulo-com-tudo-que-tenho-direito.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/noticia/2019/04/mel-maia-fala-da-volta-novelas-dos-preparativos-para-festa-de-15-anos-e-de-criticas-nas-redes-nao-entendem-que-estou-crescendo.html coletado.
+Link: https://extra.globo.com/famosos/danton-mello-comemora-os-18-anos-da-filha-em-nova-york-minha-princesa-23615871.html coletado.
+Link: https://vogue.globo.com/moda/moda-news/noticia/2019/04/sabrina-sato-reflete-sobre-maternidade-e-maior-felicidade-da-vida-uma-dadiva-amor-em-sua-forma-mais-pura.html coletado.
+Link: https://extra.globo.com/famosos/maria-melilo-curte-ferias-em-aruba-ao-lado-do-novo-namorado-23615915.html coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2019/04/seguidores-pedem-pra-ex-bbb-danrley-sair-do-armario-e-ele-rebate.html coletado.
+Link: https://vogue.globo.com/moda/moda-news/noticia/2019/04/sasha-revela-como-ira-conciliar-carreira-de-modelo-e-vida-de-estudante-de-moda-em-ny-faculdade-vem-primeiro.html coletado.
+Link: https://revistaquem.globo.com/QUEM-News/noticia/2019/04/sorridente-na-piscina-thais-carla-ironiza-lendo-comentarios-dos-haters.html coletado.
+Link: https://globoplay.globo.com/assine/ coletado.
+Link: https://globoplay.globo.com/v/7561049/ coletado.
+Link: https://globoplay.globo.com/v/7560601/ coletado.
+Link: https://globoplay.globo.com/v/7560538/ coletado.
+Link: https://globoplay.globo.com/v/7560655/ coletado.
+Link: https://globoplay.globo.com/v/7561295/ coletado.
+Link: https://www.techtudo.com.br/noticias/2019/04/soundbar-lg-sk6-e-boa-veja-analise-de-especificacoes-e-preco.ghtml coletado.
+Link: https://www.techtudo.com.br/noticias/2019/04/acessorio-sexual-curioso-faz-gravacoes-intimas-em-resolucao-hd.ghtml coletado.
+Link: https://www.techtudo.com.br/listas/2019/04/celulares-com-alta-resistencia-conheca-modelos-duros-na-queda.ghtml coletado.
+Link: https://www.techtudo.com.br/noticias/2019/04/classico-game-de-tiro-xiii-tera-remake-no-ps4-xbox-one-switch-e-pc.ghtml coletado.
+Link: https://vogue.globo.com/lifestyle/cultura/noticia/2019/04/dia-mundial-do-livro-10-lancamentos-para-ler-ja.html coletado.
+Link: https://revistaglamour.globo.com/Lifestyle/Cultura/noticia/2019/04/livros-para-cada-signo-saiba-qual-trecho-define-mais-sua-personalidade.html coletado.
+Link: https://oglobo.globo.com/cultura/livros/evento-so-com-poetas-brancos-causa-revolta-nas-redes-sociais-23615474 coletado.
+Link: https://revistacasaejardim.globo.com/Casa-e-Jardim/Viagem/noticia/2019/04/com-quanto-tempo-de-antecedencia-devo-comprar-passagens-de-aviao.html coletado.
+Link: https://gq.globo.com/Prazeres/Turismo/noticia/2019/04/turistas-brasileiros-estao-mais-bem-informados-aponta-grupo-hoteleiro.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/Arte/noticia/2019/04/telas-de-van-gogh-roubadas-em-2002-voltam-para-museu-em-amsterdam.html coletado.
+Link: https://gshow.globo.com/Famosos/noticia/mulherengo-em-serie-enzo-romani-entrega-sempre-vivi-relacionamentos-poligamicos.ghtml coletado.
+Link: https://gshow.globo.com/novelas/malhacao/2019/vem-por-ai/noticia/depois-de-momento-tenso-em-van-grupo-descobre-tragedia-em-malhacao-toda-forma-de-amar.ghtml coletado.
+Link: https://gshow.globo.com/Famosos/noticia/thaeme-marioto-revela-detalhes-do-nascimento-da-filha-liz-o-momento-mais-emocionante-da-minha-vida.ghtml coletado.
+Link: https://gshow.globo.com/programas/video-show/noticia/relembre-os-atores-que-ficaram-irreconheciveis-caracterizados-veja-antes-e-depois.ghtml coletado.
+Link: http://globosatplay.globo.com/ coletado.
+Link: http://globosatplay.globo.com/conheca/ coletado.
+Link: https://globosatplay.globo.com/bis/v/5727146/?utm_source=globo.com&utm_medium=referral&utm_campaign=trilhogcom&utm_term=bis&utm_content=rocklegends_gunsnroses coletado.
+Link: https://globosatplay.globo.com/gnt/v/7532396/?utm_source=globo.com&utm_medium=referral&utm_campaign=trilhogcom&utm_term=gnt&utm_content=temperodefamilia_t12_ep7 coletado.
+Link: https://globosatplay.globo.com/viva/v/6898246/?utm_source=globo.com&utm_medium=referral&utm_campaign=trilhogcom&utm_term=viva&utm_content=adiarista_96_aqueledasandy coletado.
+Link: https://globosatplay.globo.com/gnt/ coletado.
+Link: https://globosatplay.globo.com/sportv/ coletado.
+Link: https://globosatplay.globo.com/multishow/ coletado.
+Link: https://globosatplay.globo.com/globosat/ coletado.
+Link: https://globosatplay.globo.com/bis/ coletado.
+Link: https://globosatplay.globo.com/viva/ coletado.
+Link: https://globosatplay.globo.com/canal-off/ coletado.
+Link: https://globosatplay.globo.com/gloob/ coletado.
+Link: https://www.telecineplay.com.br/ coletado.
+Link: https://globosatplay.globo.com/universal/ coletado.
+Link: https://globosatplay.globo.com/syfy/ coletado.
+Link: https://globosatplay.globo.com/studio-universal/ coletado.
+Link: https://globosatplay.globo.com/globonews/ coletado.
+Link: https://globosatplay.globo.com/canal-brasil/ coletado.
+Link: https://globosatplay.globo.com/megapix/ coletado.
+Link: https://globosatplay.globo.com/gloobinho/ coletado.
+Link: https://globosatplay.globo.com/premierefc/ao-vivo/ coletado.
+Link: https://globosatplay.globo.com/combate/ coletado.
+Link: https://globoplay.globo.com/v/7561256/ coletado.
+Link: https://globoplay.globo.com/v/7560214/ coletado.
+Link: https://globoplay.globo.com/v/7559824/ coletado.
+Link: https://g1.globo.com/mundo/noticia/2019/04/22/o-casal-sob-risco-de-pena-de-morte-por-construir-uma-casa-no-mar.ghtml coletado.
+Link: https://g1.globo.com/natureza/noticia/2019/04/22/a-comovente-historia-da-selfie-com-os-gorilas-que-ficam-de-pe.ghtml coletado.
+Link: https://g1.globo.com/sp/santos-regiao/noticia/2019/04/22/menina-de-seis-anos-que-sumiu-enquanto-dormia-e-achada-morta-em-sp.ghtml coletado.
+Link: https://globoesporte.globo.com/sp/futebol/campeonato-paulista/noticia/corinthians-e-santos-dominam-lista-de-melhores-do-paulistao-veja-selecao-do-campeonato.ghtml coletado.
+Link: https://globoesporte.globo.com/go/futebol/noticia/vagner-mancini-recebe-proposta-do-goias-e-pode-sair-do-sao-paulo.ghtml coletado.
+Link: https://globoesporte.globo.com/volei/noticia/gabi-candido-e-a-sexta-jogadora-a-pedir-dispensa-da-selecao-brasileira-de-volei.ghtml coletado.
+Link: http://www.globo.com/todos-os-sites.html coletado.
+Link: http://g1.globo.com/ac/acre/ coletado.
+Link: http://g1.globo.com/al/alagoas/ coletado.
+Link: http://g1.globo.com/am/amazonas/ coletado.
+Link: http://g1.globo.com/bahia/?noAudience=true coletado.
+Link: http://g1.globo.com/bemestar/ coletado.
+Link: http://g1.globo.com/bom-dia-brasil/ coletado.
+Link: http://g1.globo.com/brasil/ coletado.
+Link: http://g1.globo.com/carnaval/2013/ coletado.
+Link: http://g1.globo.com/carros/ coletado.
+Link: http://g1.globo.com/ceara/ coletado.
+Link: http://g1.globo.com/ciencia-e-saude/ coletado.
+Link: http://redeglobo.globo.com/como-sera/index.html coletado.
+Link: http://g1.globo.com/concursos-e-emprego/ coletado.
+Link: http://g1.globo.com/distrito-federal/ coletado.
+Link: http://g1.globo.com/economia/ coletado.
+Link: http://www.educacao.globo.com/ coletado.
+Link: http://g1.globo.com/espirito-santo/ coletado.
+Link: http://fantastico.globo.com/ coletado.
+Link: http://g1.globo.com/educacao/ coletado.
+Link: http://g1.globo.com/natureza/ coletado.
+Link: http://globonews.globo.com/ coletado.
+Link: http://g1.globo.com/economia/agronegocios/ coletado.
+Link: http://g1.globo.com/globo-reporter/ coletado.
+Link: http://g1.globo.com/goias/ coletado.
+Link: http://g1.globo.com/jornal-da-globo/ coletado.
+Link: http://g1.globo.com/jornal-hoje/ coletado.
+Link: http://g1.globo.com/jornal-nacional/ coletado.
+Link: http://g1.globo.com/ma/maranhao/ coletado.
+Link: http://g1.globo.com/mato-grosso/ coletado.
+Link: http://g1.globo.com/mato-grosso-do-sul/ coletado.
+Link: http://g1.globo.com/minas-gerais/ coletado.
+Link: http://g1.globo.com/mundo/ coletado.
+Link: http://g1.globo.com/pa/para/ coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://www.educacao.globo.com/ do escalonador
+
+Retirado do map: http://www.educacao.globo.com/
+Retirado da filaServidores: http://www.educacao.globo.com/
+Pagina retirada do Escalonador
+
+
+Link: https://www.reuters.com// relativo coletado.
+Link: https://stockscreener.us.reuters.com/Stock/US/Index?quickscreen=gaarp coletado.
+Link: https://funds.us.reuters.com/US/screener/screener.asp coletado.
+Link: http://polling.reuters.com coletado.
+Link: http://widerimage.reuters.com coletado.
+Link: http://widerimage.reuters.com/photographer coletado.
+Link: https://www.reuters.com/brandfeatures/accenture coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://sportv.globo.com/site/nba/noticia/felipe-dos-anjos-e-tulio-da-silva-seguem-os-passos-de-yago-e-didi-e-se-inscrevem-no-draft-da-nba.ghtml do escalonador
+
+Retirado do map: https://sportv.globo.com/site/nba/noticia/felipe-dos-anjos-e-tulio-da-silva-seguem-os-passos-de-yago-e-didi-e-se-inscrevem-no-draft-da-nba.ghtml
+Retirado da filaServidores: https://sportv.globo.com/site/nba/noticia/felipe-dos-anjos-e-tulio-da-silva-seguem-os-passos-de-yago-e-didi-e-se-inscrevem-no-draft-da-nba.ghtml
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://www.techtudo.com.br/ do escalonador
+
+Retirado do map: http://www.techtudo.com.br/
+Retirado da filaServidores: http://www.techtudo.com.br/
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://globosatplay.globo.com/conheca/ do escalonador
+
+Retirado do map: http://globosatplay.globo.com/conheca/
+Retirado da filaServidores: http://globosatplay.globo.com/conheca/
+Pagina retirada do Escalonador
+
+
+Link: http://g1.globo.com/paraiba/ coletado.
+Link: http://g1.globo.com/parana/ coletado.
+Link: http://g1.globo.com/pernambuco/ coletado.
+Link: http://g1.globo.com/pi/piaui/ coletado.
+Link: http://g1.globo.com/planeta-bizarro/ coletado.
+Link: http://g1.globo.com/politica/ coletado.
+Link: http://g1.globo.com/pop-arte/ coletado.
+Link: http://g1.globo.com/previsao-do-tempo.html coletado.
+Link: http://g1.globo.com/profissao-reporter/ coletado.
+Link: http://g1.globo.com/rio-de-janeiro/ coletado.
+Link: http://g1.globo.com/rn/rio-grande-do-norte/ coletado.
+Link: http://g1.globo.com/rs/rio-grande-do-sul/ coletado.
+Link: http://g1.globo.com/ro/rondonia/ coletado.
+Link: http://g1.globo.com/sc/santa-catarina/ coletado.
+Link: http://g1.globo.com/sao-paulo/ coletado.
+Link: http://g1.globo.com/se/sergipe/ coletado.
+Link: http://g1.globo.com/rj/serra-lagos-norte/ coletado.
+Link: http://g1.globo.com/tecnologia/ coletado.
+Link: http://g1.globo.com/turismo-e-viagem/ coletado.
+Link: http://globoesporte.globo.com/ coletado.
+Link: http://globoesporte.globo.com/atletismo/ coletado.
+Link: http://globoesporte.globo.com/basquete/ coletado.
+Link: http://globoesporte.globo.com/basquete/nbb/ coletado.
+Link: http://globoesporte.globo.com/futebol/brasileirao-serie-a/ coletado.
+Link: http://globoesporte.globo.com/futebol/brasileirao-serie-b/ coletado.
+Link: http://globoesporte.globo.com/rj/futebol/campeonato-carioca/index.html coletado.
+Link: http://globoesporte.globo.com/rs/futebol/campeonato-gaucho/index.html coletado.
+Link: http://globoesporte.globo.com/mg/futebol/campeonato-mineiro/index.html coletado.
+Link: http://globoesporte.globo.com/sp/futebol/campeonato-paulista/index.html coletado.
+Link: http://globoesporte.globo.com/cartola-fc/ coletado.
+Link: http://globoesporte.globo.com/futebol/copa-do-mundo/index.html coletado.
+Link: http://globoesporte.globo.com/futebol/copa-america/ coletado.
+Link: http://globoesporte.globo.com/futebol/copa-sul-americana/index.html coletado.
+Link: http://globoesporte.globo.com/eventos/desafio-de-futsal/ coletado.
+Link: http://globoesporte.globo.com/programas/esporte-espetacular/ coletado.
+Link: http://globoesporte.globo.com/aquaticos/ coletado.
+Link: http://globoesporte.globo.com/radicais/ coletado.
+Link: http://globoesporte.globo.com/eu-atleta/ coletado.
+Link: http://globoesporte.globo.com/motor/formula-1/ coletado.
+Link: http://globoesporte.globo.com/futebol/ coletado.
+Link: http://globoesporte.globo.com/futebol/futebol-internacional/ coletado.
+Link: http://futpedia.globo.com/ coletado.
+Link: http://gamefutebol.globoesporte.globo.com/ coletado.
+Link: https://www.reuters.com/investigates/special-report/tips/ coletado.
+Link: http://newslink.reuters.com/join/subscribe coletado.
+Link: https://newslink.reuters.com/join/subscribe coletado.
+Link: http://globoesporte.globo.com/futebol/liga-dos-campeoes/ coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://widerimage.reuters.com do escalonador
+
+Retirado do map: http://widerimage.reuters.com
+Retirado da filaServidores: http://widerimage.reuters.com
+Pagina retirada do Escalonador
+
+
+Link: http://globoesporte.globo.com/olimpiadas/ coletado.
+Link: http://globoesporte.globo.com/futebol/selecao-brasileira/ coletado.
+Link: http://globoesporte.globo.com/motor/stock-car/ coletado.
+Link: http://globoesporte.globo.com/radicais/surfe/ coletado.
+Link: http://globoesporte.globo.com/tenis/ coletado.
+Link: http://globoesporte.globo.com/futebol/vai-e-vem-do-mercado/ coletado.
+Link: http://globoesporte.globo.com/programas/verao-espetacular/ coletado.
+Link: http://globoesporte.globo.com/volei/ coletado.
+Link: http://gshow.globo.com/ coletado.
+Link: http://gshow.globo.com/series/a-cara-do-pai/ coletado.
+Link: http://gshow.globo.com/programas/altas-horas/ coletado.
+Link: https://reuters.zendesk.com/hc/en-us/requests/new coletado.
+Link: http://amoresexo.globo.com/ coletado.
+Link: https://www.thomsonreuters.com/en/privacy-statement.html coletado.
+Link: http://gshow.globo.com/Bastidores/ coletado.
+Link: http://bbb.globo.com/ coletado.
+Link: http://caldeiraodohuck.globo.com/ coletado.
+Link: https://gshow.globo.com/series/carcereiros/ coletado.
+Link: http://gshow.globo.com/como-fazer/ coletado.
+Link: http://gshow.globo.com/programas/conversa-com-bial/ coletado.
+Link: http://especiaiss3.gshow.globo.com/gshow/tv/pb/index.html coletado.
+Link: http://domingaodofaustao.globo.com/ coletado.
+Link: http://gshow.globo.com/programas/e-de-casa/ coletado.
+Link: http://tvg.globo.com/programas/encontro-com-fatima-bernardes/ coletado.
+Link: http://gshow.globo.com/programas/escolinha-do-professor-raimundo/ coletado.
+Link: https://gshow.globo.com/novelas/espelho-da-vida/ coletado.
+Link: http://gshow.globo.com/Estilo/ coletado.
+Link: https://gshow.globo.com/Famosos/ coletado.
+Link: http://maisvoce.globo.com/ coletado.
+Link: http://malhacao.globo.com/ coletado.
+Link: http://gshow.globo.com/series/mister-brau/2015/ coletado.
+Link: http://gshow.globo.com/Musica/ coletado.
+Link: https://gshow.globo.com/novelas/o-setimo-guardiao/ coletado.
+Link: http://gshow.globo.com/realities/popstar/ coletado.
+Link: http://gshow.globo.com/receitas-gshow/ coletado.
+Link: http://gshow.globo.com/novelas/resumo/semana/ coletado.
+Link: http://gshow.globo.com/webseries/ coletado.
+Link: http://gshow.globo.com/series/sob-pressao/ coletado.
+Link: https://gshow.globo.com/programas/so-toca-top/ coletado.
+Link: https://gshow.globo.com/programas/ta-brincando/ coletado.
+Link: http://gshow.globo.com/programas/tamanho-familia/ coletado.
+Link: http://gshow.globo.com/programas/ta-no-ar-a-tv-na-tv/index.html coletado.
+Link: http://gshow.globo.com/realities/the-voice-brasil/ coletado.
+Link: https://gshow.globo.com/realities/the-voice-kids/ coletado.
+Link: https://gshow.globo.com/novelas/verao-90/ coletado.
+Link: http://videoshow.globo.com/ coletado.
+Link: http://gshow.globo.com/programas/zorra/ coletado.
+Link: http://g1.globo.com/pop-arte/cinema/ coletado.
+Link: http://g1.globo.com/pop-arte/musica/ coletado.
+Link: http://jogos.globo.com/ coletado.
+Link: http://mundogloob.globo.com/ coletado.
+Link: http://gnt.globo.com/ coletado.
+Link: http://horoscopo.gshow.globo.com/ coletado.
+Link: http://multishow.globo.com/ coletado.
+Link: http://tracking.parperfeito.com.br/ppbanner/bannerTracker?originId=13&identifierId=41763&actionId=1 coletado.
+Link: http://paparazzo.globo.com/ coletado.
+Link: http://oglobo.globo.com/cultura/kogut/ coletado.
+Link: http://extra.globo.com/lazer/retratosdavida/ coletado.
+Link: http://senninha.globo.com/ coletado.
+Link: http://www.agentesevenoteatro.com.br/ coletado.
+Link: http://telecine.globo.com/ coletado.
+Link: http://canalviva.globo.com/ coletado.
+Link: http://grupoglobo.globo.com/ coletado.
+Link: http://g1.globo.com/principios-editoriais-do-grupo-globo.html coletado.
+Link: http://editoraglobo.globo.com/ coletado.
+Link: http://revistaautoesporte.globo.com/ coletado.
+Link: http://revistacasaejardim.globo.com/Casa-e-Comida/ coletado.
+Link: http://revistacasaejardim.globo.com/ coletado.
+Link: http://casavogue.globo.com/ coletado.
+Link: http://revistacrescer.globo.com/ coletado.
+Link: http://revistaepoca.globo.com/ coletado.
+Link: http://epocanegocios.globo.com/ coletado.
+Link: http://revistagalileu.globo.com/ coletado.
+Link: http://revistaglamour.globo.com/ coletado.
+Link: http://revistagloborural.globo.com/ coletado.
+Link: http://gq.globo.com/ coletado.
+Link: http://revistamarieclaire.globo.com/ coletado.
+Link: http://meus5minutos.globo.com/ coletado.
+Link: http://revistamonet.globo.com/ coletado.
+Link: http://mundodositio.globo.com/ coletado.
+Link: http://revistapegn.globo.com/ coletado.
+Link: http://revistaquem.globo.com/ coletado.
+Link: http://www.techtudo.com.br/ coletado.
+Link: http://vogue.globo.com/ coletado.
+Link: http://infoglobo.com.br/Anuncie/Home.aspx coletado.
+Link: http://ela.oglobo.globo.com/ coletado.
+Link: http://extra.globo.com/ coletado.
+Link: http://oglobo.globo.com/ coletado.
+Link: http://www.valor.com.br/ coletado.
+Link: http://canaisglobosat.globo.com/ coletado.
+Link: http://globosatplay.globo.com/ coletado.
+Link: http://canalbis.globo.com/ coletado.
+Link: http://canalbrasil.globo.com/ coletado.
+Link: http://www.futura.org.br/ coletado.
+Link: http://combate.globo.com/ coletado.
+Link: http://maisglobosat.globo.com/ coletado.
+Link: http://megapix.globo.com/ coletado.
+Link: http://canaloff.globo.com/ coletado.
+Link: http://sociopremiere.globo.com/ coletado.
+Link: http://sportv.globo.com/ coletado.
+Link: http://studiouniversal.globo.com/ coletado.
+Link: http://syfy.globo.com/ coletado.
+Link: http://uc.globo.com/ coletado.
+Link: http://globofilmes.globo.com/ coletado.
+Link: http://www.somlivre.com/ coletado.
+Link: http://globoradio.globo.com/home/HOME.htm coletado.
+Link: http://bhfm.globoradio.globo.com/home/HOME.htm coletado.
+Link: http://cbn.globoradio.globo.com/home/HOME.htm coletado.
+Link: http://radioglobo.globoradio.globo.com/home/HOME.htm coletado.
+Link: http://www.zapimoveis.com.br/ coletado.
+Link: http://blog.globo.com/1.html coletado.
+Link: https://talentos.globo.com/ coletado.
+Link: https://www.globo.com// relativo coletado.
+Link: http://negocios8.redeglobo.com.br/Paginas/Midia-Kit.aspx coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://globosatplay.globo.com/ do escalonador
+
+Retirado do map: http://globosatplay.globo.com/
+Retirado da filaServidores: http://globosatplay.globo.com/
+Pagina retirada do Escalonador
+
+
+Link: http://casavogue.globo.com coletado.
+Link: https://www.pinterest.com/casavoguebrasil coletado.
+Link: https://twitter.com/#!/casavoguebrasil coletado.
+Link: http://casavogue.globo.com/rss/ultimas/feed.xml coletado.
+Link: http://casavogue.globo.com/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Videos coletado.
+Link: http://casavogue.globo.com/Casa-Vogue-Experience/index.html coletado.
+Link: http://casavogue.globo.com/promocasavogue/noticia/plantao.html coletado.
+Link: https://viewer.aemmobile.adobe.com/index.html#project/da82e3cf-1b90-40f0-9fda-33dca4d75e91/view/topLevelContent/view/revista;openTo=browsePage coletado.
+Link: https://www.assineglobo.com.br/produtos/casa-vogue/CV/?site_par=1&origem_par=1&formato_par=CV_MENSAL&versao_par=CAPA&utm_source=capa&utm_medium=site&utm_campaign=cv_mensal&utm_content=capa:site:cv_mensal:capa&utm_term=capa coletado.
+Link: http://casavogue.globo.com/Interiores/index.html coletado.
+Link: http://casavogue.globo.com/Interiores/Ambientes/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Interiores/apartamentos/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Interiores/casas/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Interiores/Decor-do-dia/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Interiores/Gente/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/index.html coletado.
+Link: http://casavogue.globo.com/Design/Design-arte/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Feiras/Salao-do-Movel-de-Milao/index.html coletado.
+Link: http://casavogue.globo.com/Design/Gente/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Luminarias/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Moveis/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Novos-Talentos-Casa-Vogue/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Objetos/noticia/plantao.html coletado.
+Link: https://casavogue.globo.com/Design/Premio-Design/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Design/Revestimentos/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/index.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/Casas/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/Cidade/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/Edificios/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/Gente/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Arquitetura/Paisagismo/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/index.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Arte/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Fotografia/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Comida-bebida/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Hoteis/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Livros/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Comida-bebida/Receita/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Restaurantes/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/LazerCultura/Viagem/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/index.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/Arte/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/Arquitetura/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/Decoracao/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/Design/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/MostrasExpos/Fotografia/noticia/plantao.html coletado.
+Link: http://casavogue.globo.com/Colunas/index.html coletado.
+Link: http://casavogue.globo.com/Guia-Milao/index.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/Arte/noticia/2019/04/telas-de-van-gogh-roubadas-em-2002-voltam-para-museu-em-amsterdam.html/LazerCultura/Arte/noticia/2019/04/telas-de-van-gogh-roubadas-em-2002-voltam-para-museu-em-amsterdam.html relativo coletado.
+Link: http://casavogue.globo.com/Arte/index.html coletado.
+Link: https://www.assineglobo.com.br/produtos/casa-vogue/CV/?site_par=1&origem_par=1&formato_par=CV_MENSAL&versao_par=BOTAO&utm_source=botao&utm_medium=site&utm_campaign=cv_mensal&utm_content=botao:site:cv_mensal:botao&utm_term=botao coletado.
+Link: https://www.vangoghmuseum.nl/ coletado.
+Link: https://casavogue.globo.com/LazerCultura/Arte/noticia/2019/02/museu-em-paris-projeta-obras-de-van-gogh-em-paredes-de-10-metros.html coletado.
+Link: https://casavogue.globo.com/Arquitetura/Edificios/noticia/2019/04/o-que-se-perdeu-e-o-que-foi-salvo-no-incendio-da-catedral-de-notre-dame.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/noticia/2019/03/obra-de-basquiat-vendida-por-us-200-em-1988-foi-leiloada-por-us-41-milhoes.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/noticia/2017/06/obras-de-arte-consagradas-inspiram-cenarios-de-filmes.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/Arte/noticia/2016/08/6-obras-de-arte-mais-caras-do-mundo.html coletado.
+Link: https://casavogue.globo.com/LazerCultura/Arte/noticia/2018/07/vans-lanca-tenis-com-obras-de-van-gogh-estampadas.html coletado.
+Link: https://casavogue.globo.com/Curiosidades/noticia/2019/02/quadros-de-artistas-impressionistas-sao-colocadas-venda-apos-estarem-escondidos-por-anos.html coletado.
+Link: https://www.pinterest.com/casavoguebrasil/ coletado.
+Link: https://www.assineglobo.com.br/sac/ coletado.
+Link: http://casavogue.globo.com/Expediente/noticia/2012/06/expediente.html coletado.
+Link: http://www.globo.com/privacidade.html coletado.
+Link: https://oglobo.globo.com/principios-editoriais/ coletado.
+Link: http://editora.globo.com/midiakit/cv/midiakit_cv.pdf coletado.
+Link: http://casavogue.globo.com/imprensa coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://revistagloborural.globo.com/ do escalonador
+
+Retirado do map: http://revistagloborural.globo.com/
+Retirado da filaServidores: http://revistagloborural.globo.com/
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://globosatplay.globo.com/ do escalonador
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://casavogue.globo.com/Design/Luminarias/noticia/plantao.html do escalonador
+
+Retirado do map: http://casavogue.globo.com/Design/Luminarias/noticia/plantao.html
+Retirado da filaServidores: http://casavogue.globo.com/Design/Luminarias/noticia/plantao.html
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://canaloff.globo.com/ do escalonador
+
+Retirado do map: http://canaloff.globo.com/
+Retirado da filaServidores: http://canaloff.globo.com/
+Pagina retirada do Escalonador
+
+
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-diana-fugira-de-casa-apos-flagra-de-nicolau.html/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-diana-fugira-de-casa-apos-flagra-de-nicolau.html relativo coletado.
+Link: https://kogut.oglobo.globo.com coletado.
+Link: https://kogut.oglobo.globo.com/ coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/series/ultimas-noticias.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/critica/ultimas-noticias.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/audiencia/ultimas-noticias.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/coluna/ultimas-noticias.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/notas-kogut.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/ultimas-noticias.html coletado.
+Link: http://kogut.oglobo.globo.com/tag/o-setimo-guardiao.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/noticia/2019/04/laryssa-ayres-conta-o-que-espera-para-o-final-de-diana-em-o-setimo-guardiao-e-comenta-repercussao-do-namoro-com-maria-maya.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-nicolau-nao-tera-redencao-no-final.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-saiba-qual-guardiao-escapara-da-morte.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-fonte-ganhara-novos-guardioes-no-ultimo-capitulo.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/em-o-setimo-guardiao-gabriel-acusara-murilo-de-traicao-quer-me-dar-um-golpe.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-luz-descobrira-quem-sao-seus-pais.html coletado.
+Link: http://twitter.com/PatriciaKogut coletado.
+Link: http://www.instagram.com/colunapatriciakogut/ coletado.
+Link: http://www.facebook.com/PatriciaKogutOGlobo/ coletado.
+Link: https://kogut.oglobo.globo.com/rss/ultimas.feed coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/nota-leitor.html coletado.
+Link: https://oglobo.globo.com/ coletado.
+Link: https://oglobo.globo.com/anuncie/ coletado.
+Link: http://www.vagas.com.br/infoglobo coletado.
+Link: https://oglobo.globo.com/servicos/privacidade.asp coletado.
+Link: https://oglobo.globo.com/servicos/termos.asp coletado.
+Link: https://www.centraldoassinante.oglobo.com.br/ coletado.
+Link: http://clubeoglobo.com.br coletado.
+Link: http://www.assineoglobo.com.br coletado.
+Link: http://www.agenciaoglobo.com.br/ coletado.
+Link: https://oglobo.globo.com/fale-conosco/ coletado.
+Link: https://globoplay.globo.com/v/7559824//v/7559824/ relativo coletado.
+Link: http://centraldeajuda.globo.com/Globoplay/ coletado.
+Link: http://centraldeajuda.globo.com/ajuda-isp/Globoplay/Acesso-e-Cadastro/noticia/2015/10/o-que-e-o-globo-play.html coletado.
+Link: https://globoplay.globo.com/termosepoliticas/ coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-saiba-qual-guardiao-escapara-da-morte.html do escalonador
+
+Retirado do map: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-saiba-qual-guardiao-escapara-da-morte.html
+Retirado da filaServidores: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/o-setimo-guardiao-saiba-qual-guardiao-escapara-da-morte.html
+Pagina retirada do Escalonador
+
+
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-hussein-prometera-vinganca-pela-morte-de-soraia.html/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-hussein-prometera-vinganca-pela-morte-de-soraia.html relativo coletado.
+Link: http://kogut.oglobo.globo.com/tag/orfaos-da-terra.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-baleado-por-aziz-amante-de-soraia-sobrevivera.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-aziz-invadira-casamento-de-laila-e-jamil.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-soraia-sera-assassinada-na-frente-de-dalila.html coletado.
+Link: http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-laila-e-jamil-vao-se-casar.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-laila-perdoara-jamil.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-jamil-salvara-laila.html coletado.
+Link: https://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2019/04/orfaos-da-terra-dalila-descobrira-romance-de-laila-e-jamil.html coletado.
+Link: http://twitter.com/PatriciaKogut coletado.
+Link: https://oglobo.globo.com/servicos/privacidade.asp coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2019/04/seguidores-pedem-pra-ex-bbb-danrley-sair-do-armario-e-ele-rebate.html/Celebridades/noticia/2019/04/seguidores-pedem-pra-ex-bbb-danrley-sair-do-armario-e-ele-rebate.html relativo coletado.
+Link: https://revistaglamour.globo.com/Moda/ coletado.
+Link: https://revistaglamour.globo.com/Beleza/ coletado.
+Link: https://revistaglamour.globo.com/Celebridades/ coletado.
+Link: https://revistaglamour.globo.com/Lifestyle/ coletado.
+Link: https://revistaglamour.globo.com/TV-Glamour/ coletado.
+Link: https://revistaglamour.globo.com/G-Especial/ coletado.
+Link: https://www.assineglobo.com.br/produtos/glamour/GL?site_par=1&origem_par=1&formato_par=CJ_MENSAL&versao_par=HEADER&utm_source=header&utm_medium=site&utm_campaign=cj_mensal&utm_content=header:site:cj_mensal:header&utm_term=header coletado.
+Link: https://revistaglamour.globo.com/ coletado.
+Link: http://revistaglamour.globo.com/Moda/Como-usar/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Moda/Tapete-vermelho/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Moda/temporadas/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Moda/Tendencias/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Beleza/Cabelo/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Beleza/Maquiagem/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Beleza/temporadas/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Beleza/Unhas/noticia/plantao.html coletado.
+Link: https://revistaglamour.globo.com/Amor-Sexo/ coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Carreira-e-dinheiro/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Casamento/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Cultura/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Decoracao/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Gastronomia/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Glamour-na-Estrada/noticia/plantao.html coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Must-Share/ coletado.
+Link: http://revistaglamour.globo.com/Lifestyle/Viagem/noticia/plantao.html coletado.
+Link: https://revistaglamour.globo.com/G-Especial/Astral/index.html coletado.
+Link: https://revistaglamour.globo.com/G-Especial/Corpo/index.html coletado.
+Link: https://revistaglamour.globo.com/Glamour-Apresenta/noticia/plantao.html coletado.
+Link: https://oglobo.globo.com/principios-editoriais/ coletado.
+Link: http://www.facebook.com/glamourbrasil coletado.
+Link: http://twitter.com/glamourbr coletado.
+Link: http://instagram.com/glamourbrasil coletado.
+Link: http://pinterest.com/glamourbr/ coletado.
+Link: https://www.assineglobo.com.br/produtos/glamour/GL?site_par=1&origem_par=1&formato_par=CJ_MENSAL&versao_par=MENU&utm_source=menu&utm_medium=site&utm_campaign=cj_mensal&utm_content=menu:site:cj_mensal:menu&utm_term=menu coletado.
+Link: http://anuncie.globo.com/editora-globo coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2019/04/ex-bbb-hana-khalil-grita-em-video-no-instagram-me-superem.html coletado.
+Link: https://revistaglamour.globo.com/Lifestyle/Must-Share/noticia/2018/06/primeiro-casamento-real-gay-da-inglaterra-acontecera-em-setembro.html coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2017/09/exclusivo-cara-delevingne-fala-sobre-cinema-sexualidade-e-vida-de-modelo.html coletado.
+Link: https://revistaglamour.globo.com/Moda/Fashion-news/noticia/2018/11/hana-khalil-e-irmas-cassou-criaram-uma-linha-de-beachwear-e-nos-amamos.html coletado.
+Link: https://twitter.com/DanrleyOficial_/status/1120406647090888706?ref_src=twsrc%5Etfw coletado.
+Link: https://twitter.com/hanakhalil/status/1120409212746653702?ref_src=twsrc%5Etfw coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2019/03/ex-bbb-marcos-harter-causa-revolta-ao-aparecer-comendo-durante-cirurgia.html coletado.
+Link: https://revistaglamour.globo.com/Celebridades/noticia/2019/04/ex-bbb-maria-claudia-posa-com-amigas-na-praia-no-ceara.html coletado.
+Link: https://www.assineglobo.com.br/produtos/glamour/GL?site_par=1&origem_par=1&formato_par=CJ_MENSAL&versao_par=FOOTER&utm_source=footer&utm_medium=site&utm_campaign=cj_mensal&utm_content=footer:site:cj_mensal:footer&utm_term=footer coletado.
+Link: http://estaticos.edglobo.globo.com/glamour/MediaKit/GL_MidiaKit_2018_atl.pdf coletado.
+Link: https://www.assineglobo.com.br/produtos/glamour/GL/?site_par=1&origem_par=1&formato_par=GL_MENSAL&versao_par=BOTAO&utm_source=botao&utm_medium=site&utm_campaign=gl_mensal&utm_content=botao:site:gl_mensal:botao&utm_term=botao coletado.
+Link: https://revistaglamour.globo.com/expediente.html coletado.
+Link: http://revistaglamour.globo.com/Imprensa/noticia/2012/03/imprensa.html coletado.
+Link: https://www.globo.com/privacidade.html coletado.
+Link: https://www.assineglobo.com.br/sac/ coletado.
+Link: http://www.glamour.co.za/ coletado.
+Link: http://www.glamour.de/ coletado.
+Link: http://glamour.bg/ coletado.
+Link: http://www.glamour.es/ coletado.
+Link: http://www.glamour.com/?us_site=y coletado.
+Link: http://www.glamourparis.com/ coletado.
+Link: http://www.glamour.nl/ coletado.
+Link: http://www.glamouronline.hu/ coletado.
+Link: http://www.glamour.mx/ coletado.
+Link: http://www.glamour.it/ coletado.
+Link: http://www.glamour.pl/ coletado.
+Link: http://www.glamourmagazine.co.uk/ coletado.
+Link: http://www.glamourmagazine.ro/ coletado.
+Link: http://www.glamour.ru/ coletado.
+Link: http://www.globo.com coletado.
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://kogut.oglobo.globo.com/tag/orfaos-da-terra.html do escalonador
+
+Retirado do map: http://kogut.oglobo.globo.com/tag/orfaos-da-terra.html
+Retirado da filaServidores: http://kogut.oglobo.globo.com/tag/orfaos-da-terra.html
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://globonews.globo.com/ do escalonador
+
+Retirado do map: http://globonews.globo.com/
+Retirado da filaServidores: http://globonews.globo.com/
+Pagina retirada do Escalonador
+
+
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://kogut.oglobo.globo.com/tag/o-setimo-guardiao.html do escalonador
+Nao possui autorizacao para coletar a pagina
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://tracking.parperfeito.com.br/ppbanner/bannerTracker?originId=13&identifierId=41763&actionId=1 do escalonador
+
+Retirado do map: http://tracking.parperfeito.com.br/ppbanner/bannerTracker?originId=13&identifierId=41763&actionId=1
+Retirado da filaServidores: http://tracking.parperfeito.com.br/ppbanner/bannerTracker?originId=13&identifierId=41763&actionId=1
+Pagina retirada
+Link: https://extra.globo.com/ coletado.
+Link: https://extra.globo.com/fotografias/ coletado.
+Link: https://extra.globo.com/videos/ coletado.
+Link: https://jornaldigital.extra.globo.com coletado.
+Link: https://extra.globo.com/promocao/ coletado.
+
+
+Terminou testaPageFetcher
+
+Thread 78: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://estaticos.edglobo.globo.com/glamour/MediaKit/GL_MidiaKit_2018_atl.pdf do escalonador
+
+Retirado do map: http://estaticos.edglobo.globo.com/glamour/MediaKit/GL_MidiaKit_2018_atl.pdf
+Retirado da filaServidores: http://estaticos.edglobo.globo.com/glamour/MediaKit/GL_MidiaKit_2018_atl.pdf
+Pagina retirada do Escalonador
+
+
+Thread 33: Fim teste Page Fetcher
+Thread 25: Fim teste Page Fetcher
+Thread 66: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://maisvoce.globo.com/ do escalonador
+
+Retirado do map: http://maisvoce.globo.com/
+Retirado da filaServidores: http://maisvoce.globo.com/
+Pagina retirada do Escalonador
+
+
+Thread 1: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://www.assineglobo.com.br/sac/ do escalonador
+
+Retirado do map: https://www.assineglobo.com.br/sac/
+Retirado da filaServidores: https://www.assineglobo.com.br/sac/
+Pagina retirada do Escalonador
+
+
+Thread 18: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://www.facebook.com/PatriciaKogutOGlobo/ do escalonador
+
+Retirado do map: http://www.facebook.com/PatriciaKogutOGlobo/
+Retirado da filaServidores: http://www.facebook.com/PatriciaKogutOGlobo/
+Pagina retirada do Escalonador
+
+
+Thread 54: Fim teste Page Fetcher
+Thread 24: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://jogos.globo.com/ do escalonador
+
+Retirado do map: http://jogos.globo.com/
+Retirado da filaServidores: http://jogos.globo.com/
+Pagina retirada do Escalonador
+
+
+Thread 11: Fim teste Page Fetcher
+Thread 64: Fim teste Page Fetcher
+Thread 48: Fim teste Page Fetcher
+Thread 88: Fim teste Page Fetcher
+Thread 94: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://www.assineglobo.com.br/produtos/glamour/GL?site_par=1&origem_par=1&formato_par=CJ_MENSAL&versao_par=HEADER&utm_source=header&utm_medium=site&utm_campaign=cj_mensal&utm_content=header:site:cj_mensal:header&utm_term=header do escalonador
+Thread 3: Fim teste Page Fetcher
+Thread 56: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://centraldeajuda.globo.com/Globoplay/ do escalonador
+
+Retirado do map: http://centraldeajuda.globo.com/Globoplay/
+Retirado da filaServidores: http://centraldeajuda.globo.com/Globoplay/
+Pagina retirada do Escalonador
+
+
+Thread 29: Fim teste Page Fetcher
+Thread 32: Fim teste Page Fetcher
+Thread 85: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://www.assineglobo.com.br/produtos/glamour/GL?site_par=1&origem_par=1&formato_par=CJ_MENSAL&versao_par=FOOTER&utm_source=footer&utm_medium=site&utm_campaign=cj_mensal&utm_content=footer:site:cj_mensal:footer&utm_term=footer do escalonador
+Thread 38: Fim teste Page Fetcher
+Thread 89: Fim teste Page Fetcher
+Thread 31: Fim teste Page Fetcher
+Thread 49: Fim teste Page Fetcher
+Thread 58: Fim teste Page Fetcher
+Thread 34: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://videoshow.globo.com/ do escalonador
+
+Retirado do map: http://videoshow.globo.com/
+Retirado da filaServidores: http://videoshow.globo.com/
+Pagina retirada do Escalonador
+
+
+Thread 47: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://www.glamourmagazine.ro/ do escalonador
+
+Retirado do map: http://www.glamourmagazine.ro/
+Retirado da filaServidores: http://www.glamourmagazine.ro/
+Pagina retirada do Escalonador
+
+
+Thread 0: Fim teste Page Fetcher
+Thread 5: Fim teste Page Fetcher
+Thread 65: Fim teste Page Fetcher
+Thread 61: Fim teste Page Fetcher
+Thread 75: Fim teste Page Fetcher
+Thread 6: Fim teste Page Fetcher
+Thread 84: Fim teste Page Fetcher
+Thread 35: Fim teste Page Fetcher
+Nao possui autorizacao para coletar a pagina
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://oglobo.globo.com/servicos/privacidade.asp do escalonador
+
+Retirado do map: https://oglobo.globo.com/servicos/privacidade.asp
+Retirado da filaServidores: https://oglobo.globo.com/servicos/privacidade.asp
+Pagina retirada
+Thread 23: Fim teste Page Fetcher
+Thread 80: Fim teste Page Fetcher
+Thread 15: Fim teste Page Fetcher
+Thread 42: Fim teste Page Fetcher
+Thread 13: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://funds.us.reuters.com/US/screener/screener.asp do escalonador
+
+Retirado do map: https://funds.us.reuters.com/US/screener/screener.asp
+Retirado da filaServidores: https://funds.us.reuters.com/US/screener/screener.asp
+Pagina retirada do Escalonador
+
+
+Thread 97: Fim teste Page Fetcher
+Thread 20: Fim teste Page Fetcher
+Thread 87: Fim teste Page Fetcher
+Thread 98: Fim teste Page Fetcher
+Thread 67: Fim teste Page Fetcher
+Thread 57: Fim teste Page Fetcher
+Thread 45: Fim teste Page Fetcher
+Thread 36: Fim teste Page Fetcher
+Thread 73: Fim teste Page Fetcher
+Thread 68: Fim teste Page Fetcher
+Thread 52: Fim teste Page Fetcher
+Thread 53: Fim teste Page Fetcher
+Thread 69: Fim teste Page Fetcher
+Thread 26: Fim teste Page Fetcher
+Thread 82: Fim teste Page Fetcher
+Thread 79: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina https://www.americanas.com.br/ do escalonador
+
+Retirado do map: https://www.americanas.com.br/
+Retirado da filaServidores: https://www.americanas.com.br/
+Pagina retirada do Escalonador
+
+
+Thread 4: Fim teste Page Fetcher
+Thread 59: Fim teste Page Fetcher
+Thread 27: Fim teste Page Fetcher
+Thread 30: Fim teste Page Fetcher
+Thread 92: Fim teste Page Fetcher
+Thread 95: Fim teste Page Fetcher
+Thread 74: Fim teste Page Fetcher
+Thread 55: Fim teste Page Fetcher
+Thread 8: Fim teste Page Fetcher
+Thread 41: Fim teste Page Fetcher
+Thread 91: Fim teste Page Fetcher
+Thread 60: Fim teste Page Fetcher
+Thread 96: Fim teste Page Fetcher
+Thread 14: Fim teste Page Fetcher
+
+
+
+Impossivel criar o record para robots.txt, tentando tirar pagina http://editora.globo.com/midiakit/cv/midiakit_cv.pdf do escalonador
+
+Retirado do map: http://editora.globo.com/midiakit/cv/midiakit_cv.pdf
+Retirado da filaServidores: http://editora.globo.com/midiakit/cv/midiakit_cv.pdf
+Pagina retirada do Escalonador
+
+
+Thread 46: Fim teste Page Fetcher
+Thread 12: Fim teste Page Fetcher
+Thread 0: Fim teste Page Fetcher
+Thread 37: Fim teste Page Fetcher
+Thread 51: Fim teste Page Fetcher
+Thread 81: Fim teste Page Fetcher
+Thread 72: Fim teste Page Fetcher
+Thread 62: Fim teste Page Fetcher
+Thread 40: Fim teste Page Fetcher
+Thread 44: Fim teste Page Fetcher
+Thread 77: Fim teste Page Fetcher
+Thread 21: Fim teste Page Fetcher
+Thread 90: Fim teste Page Fetcher
+Thread 50: Fim teste Page Fetcher
+Thread 9: Fim teste Page Fetcher
+Thread 39: Fim teste Page Fetcher
+Thread 22: Fim teste Page Fetcher
+Thread 76: Fim teste Page Fetcher
+Thread 19: Fim teste Page Fetcher
+Thread 63: Fim teste Page Fetcher
+Thread 83: Fim teste Page Fetcher
+Thread 70: Fim teste Page Fetcher
+Thread 10: Fim teste Page Fetcher
+Thread 17: Fim teste Page Fetcher
+Thread 16: Fim teste Page Fetcher
+Thread 28: Fim teste Page Fetcher
+Thread 7: Fim teste Page Fetcher
+Thread 43: Fim teste Page Fetcher
+Thread 2: Fim teste Page Fetcher
+Thread 86: Fim teste Page Fetcher
+Thread 93: Fim teste Page Fetcher
+Thread 71: Fim teste Page Fetcher
+CONSTRUÍDO COM SUCESSO (tempo total: 39 segundos)

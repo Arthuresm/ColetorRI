@@ -1,0 +1,19 @@
+ant -f C:\\Users\\Bruno\\Desktop\\Coletor\\ColetorRI\\ColetorCodingDojo1\\ColetorRI -Djavac.includes=crawler/test/EscalonadorSimplesTeste.java -Dnb.internal.action.name=run.single -Drun.class=crawler.test.EscalonadorSimplesTeste run-single
+init:
+Deleting: C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\built-jar.properties
+deps-jar:
+Updating property file: C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\built-jar.properties
+Compiling 1 source file to C:\Users\Bruno\Desktop\Coletor\ColetorRI\ColetorCodingDojo1\ColetorRI\build\classes
+compile-single:
+run-single:
+Coletor RI - Inicio main:
+
+
+Resgatando uma URL de um dominio que acaba de ser acessado... 
+
+
+false
+t1 = 1556032248849
+t2 = 1556032251864
+Terminou testAdicionaRemovePagina 
+CONSTRUÍDO COM SUCESSO (tempo total: 16 segundos)
